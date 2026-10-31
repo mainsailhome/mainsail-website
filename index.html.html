@@ -1,0 +1,1143 @@
+<title>Mainsail Home Services</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Mainsail Home &amp; Property Services: handyman repairs, kitchen and bath remodeling, senior home safety, maintenance plans, rental make-readies and RainSoft water treatment in Bay and Walton Counties, Florida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: sticky logo bar with dropdown menus; each page is a set of full-width bands around a 1120px column; grids stack to one column on phones. */
+:root {
+  --navy: #1B2D45;
+  --slate: #3E6670;
+  --gold: #C9973A;
+  --gold-ink: #8A6420;
+  --sky: #E6EEF3;
+  --bg: #FFFFFF;
+  --tint: #EEF3F5;
+  --card: #FFFFFF;
+  --fg: #1B2D45;
+  --muted: #4B5E72;
+  --line: #D6DEE5;
+  --hero-bg: #1B2D45;
+  --hero-fg: #FFFFFF;
+  --hero-muted: #C8D4DE;
+  --btn-fg: #1B2D45;
+  --logo-ink: #1B2D45;
+  --logo-sail: #3E6670;
+  --icon-bg: #1B2D45;
+  --menu-hover: #EEF3F5;
+  --display: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --body: 'Source Sans 3', 'Segoe UI', Roboto, Arial, sans-serif;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1A28; --tint: #152437; --card: #1A2B40; --fg: #E8EEF3; --muted: #A9B8C6; --line: #2A3D55; --sky: #1A2B40;
+    --hero-bg: #0B1420; --hero-fg: #FFFFFF; --hero-muted: #B4C2CF; --gold-ink: #E2B868; --menu-hover: #22364F;
+    --logo-ink: #FFFFFF; --logo-sail: #8FB3BC; --slate: #8FB3BC; --icon-bg: #2C4A66; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1A28; --tint: #152437; --card: #1A2B40; --fg: #E8EEF3; --muted: #A9B8C6; --line: #2A3D55; --sky: #1A2B40;
+  --hero-bg: #0B1420; --hero-fg: #FFFFFF; --hero-muted: #B4C2CF; --gold-ink: #E2B868; --menu-hover: #22364F;
+  --logo-ink: #FFFFFF; --logo-sail: #8FB3BC; --slate: #8FB3BC; --icon-bg: #2C4A66; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 18px; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 40; background: var(--bg); }
+h1, h2, h3, h4 { font-family: var(--display); line-height: 1.18; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+h3 { font-size: 20px; font-weight: 700; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+.band { padding-block: 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band.tint { background: var(--tint); }
+.band.sky { background: var(--sky); }
+.wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+.eyebrow { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-ink); }
+.lede { font-size: 20px; color: var(--muted); max-width: 64ch; }
+.head { display: flex; flex-direction: column; gap: 12px; }
+.head.center { align-items: center; text-align: center; }
+.head.center .lede { margin-inline: auto; }
+.rule { width: 56px; height: 4px; border-radius: 2px; background: var(--gold); }
+.prose { display: flex; flex-direction: column; gap: 14px; color: var(--muted); max-width: 68ch; }
+.prose ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-family: var(--display); font-weight: 700; font-size: 16px; text-decoration: none; border: 2px solid transparent; cursor: pointer; }
+.btn.gold { background: var(--gold); color: var(--btn-fg); }
+.btn.gold:hover { filter: brightness(1.06); }
+.btn.ghost { border-color: currentColor; background: transparent; color: inherit; }
+.btn.navy { background: var(--navy); color: #FFFFFF; }
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Header + dropdowns */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); border-bottom: 1px solid var(--line); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.top .row { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--logo-ink); flex-shrink: 0; }
+.brand svg { width: 54px; height: 42px; flex-shrink: 0; }
+.brand-name { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-name b { font-family: var(--display); font-weight: 800; font-size: 21px; letter-spacing: 0.12em; }
+.brand-name span { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.14em; color: var(--slate); }
+.menu { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.dd { position: relative; }
+.dd > button, .menu > li > a.plain { appearance: none; background: none; border: 0; font: inherit; font-family: var(--body); font-weight: 600; font-size: 16px; color: var(--fg); padding: 10px 12px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 6px; min-height: 44px; text-decoration: none; }
+.dd > button svg { width: 14px; height: 14px; transition: transform 0.15s; }
+.dd > button:hover, .menu > li > a.plain:hover, .dd.open > button { background: var(--menu-hover); }
+.dd.open > button svg { transform: rotate(180deg); }
+.dd.current > button, .menu > li > a.plain.current { color: var(--slate); }
+.sub { display: none; position: absolute; top: calc(100% + 6px); left: 0; min-width: 270px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px rgba(15, 26, 40, 0.16); padding: 8px; list-style: none; margin: 0; z-index: 35; }
+.dd.open .sub { display: block; }
+@media (hover: hover) and (min-width: 1081px) { .dd:hover .sub { display: block; } .dd:hover > button { background: var(--menu-hover); } }
+.sub a { display: block; padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 16px; color: var(--fg); }
+.sub a:hover, .sub a.current { background: var(--menu-hover); }
+.sub a.current { font-weight: 700; color: var(--slate); }
+.sub .over { font-weight: 700; border-bottom: 1px solid var(--line); border-radius: 8px 8px 0 0; margin-bottom: 4px; }
+.top .call { flex-shrink: 0; }
+.burger { display: none; appearance: none; background: none; border: 1px solid var(--line); border-radius: 10px; width: 48px; height: 48px; align-items: center; justify-content: center; cursor: pointer; color: var(--fg); }
+.burger svg { width: 24px; height: 24px; }
+@media (max-width: 1080px) {
+  .burger { display: inline-flex; }
+  .top .call { display: none; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 30px rgba(15, 26, 40, 0.14); max-height: calc(100vh - 80px); overflow-y: auto; padding-block: 8px 16px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .nav.show { display: block; }
+  .menu { flex-direction: column; align-items: stretch; gap: 0; }
+  .dd > button, .menu > li > a.plain { width: 100%; justify-content: space-between; font-size: 18px; padding: 14px 8px; border-bottom: 1px solid var(--line); border-radius: 0; }
+  .sub { position: static; box-shadow: none; border: 0; padding: 4px 0 8px 12px; min-width: 0; background: transparent; }
+  .mobile-call { display: flex !important; margin-top: 14px; }
+}
+.mobile-call { display: none !important; }
+
+/* Hero + page banner */
+.hero { position: relative; background: var(--hero-bg); color: var(--hero-fg); padding-block: 64px 0; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); overflow: hidden; }
+.hero::after, .banner::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 22px); pointer-events: none; }
+.hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.hero h1 { font-size: clamp(34px, 5vw, 56px); font-weight: 800; }
+.hero h1 em, .banner h1 em { font-style: normal; color: var(--gold); }
+.hero p.sub { font-size: 21px; color: var(--hero-muted); max-width: 54ch; }
+.hero .copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.hero .meta { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+.hero .phone { font-family: var(--display); font-weight: 800; font-size: 30px; letter-spacing: 0.02em; }
+.hero .phone small { display: block; font-family: var(--body); font-weight: 600; font-size: 14px; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; }
+.hero-art { display: flex; justify-content: center; }
+.hero-art svg { width: 100%; max-width: 420px; height: auto; }
+.wave { position: relative; z-index: 1; display: block; width: 100%; height: 80px; margin-top: 40px; }
+@media (max-width: 820px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .hero-art { order: -1; } .hero-art svg { max-width: 240px; } }
+.banner { position: relative; background: var(--hero-bg); color: var(--hero-fg); padding-block: 48px 0; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); overflow: hidden; }
+.banner .wrap { position: relative; z-index: 1; gap: 14px; }
+.banner h1 { font-size: clamp(32px, 4.6vw, 50px); font-weight: 800; }
+.banner .lede { color: var(--hero-muted); }
+.crumbs { display: flex; gap: 8px; flex-wrap: wrap; font-size: 15px; color: var(--hero-muted); }
+.crumbs a { color: var(--gold); text-decoration: none; font-weight: 600; }
+.banner .wave { margin-top: 28px; height: 60px; }
+
+.badge { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; border: 2px solid var(--gold); border-radius: 999px; padding: 6px 16px 6px 10px; font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-ink); }
+.badge svg { width: 20px; height: 20px; }
+.hero .badge, .banner .badge { color: var(--gold); }
+
+/* Shared components */
+.offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.offer { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.offer b { font-family: var(--display); font-size: 13px; letter-spacing: 0.16em; color: var(--gold-ink); }
+.offer h3 { font-size: 19px; }
+.offer p { color: var(--muted); font-size: 16px; }
+@media (max-width: 760px) { .offers { grid-template-columns: minmax(0, 1fr); } }
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 960px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .cards { grid-template-columns: minmax(0, 1fr); } }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
+.card:hover { border-color: var(--slate); transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { .card:hover { transform: none; } }
+.card .top-row { display: flex; align-items: center; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.card .ic { width: 58px; height: 58px; border-radius: 14px; background: var(--icon-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.card .ic svg { width: 32px; height: 32px; }
+.card h3 { font-size: 19px; font-weight: 600; }
+.card .more { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--slate); font-size: 16px; }
+.card .more svg { width: 22px; height: 22px; }
+
+.split { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.split.even { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+@media (max-width: 860px) { .split, .split.even { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
+.side { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 16px; position: sticky; top: 100px; }
+.side .ph { font-family: var(--display); font-weight: 800; font-size: 30px; }
+.side ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.side li { display: flex; gap: 10px; align-items: flex-start; font-size: 16px; }
+.side li svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; }
+@media (max-width: 860px) { .side { position: static; } }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 20px; }
+.checks li { display: flex; gap: 10px; align-items: flex-start; font-weight: 600; }
+.checks svg { width: 22px; height: 22px; flex-shrink: 0; margin-top: 3px; }
+@media (max-width: 520px) { .checks { grid-template-columns: minmax(0, 1fr); } }
+.note { border-left: 4px solid var(--gold); padding: 4px 0 4px 16px; color: var(--muted); font-size: 17px; }
+.related { display: flex; flex-wrap: wrap; gap: 10px; }
+.related a { border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; text-decoration: none; font-weight: 600; font-size: 16px; color: var(--fg); background: var(--card); }
+.related a:hover { border-color: var(--slate); }
+
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; counter-reset: step; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; align-items: start; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.steps li::before { content: counter(step); width: 44px; height: 44px; border-radius: 999px; background: var(--gold); color: var(--btn-fg); font-family: var(--display); font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.steps p { color: var(--muted); font-size: 16px; }
+.flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; counter-reset: flow; }
+.flow li { counter-increment: flow; display: flex; flex-direction: column; gap: 8px; }
+.flow li::before { content: counter(flow); width: 44px; height: 44px; border-radius: 999px; background: var(--navy); color: #FFFFFF; font-family: var(--display); font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.flow p { color: var(--muted); font-size: 16px; }
+@media (max-width: 900px) { .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .flow { grid-template-columns: minmax(0, 1fr); } }
+
+.intro { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; align-items: center; }
+.intro-art { position: relative; background: var(--navy); border-radius: 16px; aspect-ratio: 1 / 1; max-width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.intro-art svg.tools { width: 82%; height: auto; }
+.intro-art .stamp { position: absolute; left: -2px; bottom: -2px; background: var(--bg); border-radius: 0 16px 0 16px; padding: 14px 16px 10px 12px; color: var(--logo-ink); }
+.intro-art .stamp svg { width: 96px; height: 74px; display: block; }
+.intro-list { display: flex; flex-direction: column; gap: 22px; }
+.intro-list p { color: var(--muted); }
+@media (max-width: 860px) { .intro { grid-template-columns: minmax(0, 1fr); } .intro-art { max-width: 420px; } }
+
+.aud { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 960px) { .aud { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .aud { grid-template-columns: minmax(0, 1fr); } }
+.aud-card { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--card); display: flex; flex-direction: column; }
+.aud-art { height: 160px; display: flex; align-items: center; justify-content: center; }
+.aud-art svg { width: 112px; height: 112px; }
+.aud-art.a { background: #1B2D45; } .aud-art.b { background: #3E6670; } .aud-art.c { background: #8A6420; }
+.aud-text { background: #3E6670; color: #FFFFFF; padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; text-align: center; flex-grow: 1; }
+.aud-card:nth-child(3n+1) .aud-text { background: #2E5059; }
+.aud-text h3 { font-size: 22px; font-weight: 600; }
+.aud-text p { color: #E3ECEF; font-size: 16px; }
+
+.ally { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 900px) { .ally { grid-template-columns: minmax(0, 1fr); } }
+.ally-card { border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); }
+.ally-top { height: 190px; background: #1B2D45; display: flex; align-items: center; justify-content: center; }
+.ally-top .mono { width: 116px; height: 116px; border-radius: 999px; border: 4px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; font-size: 50px; color: #FFFFFF; background: #2A4260; }
+.ally-top svg { width: 106px; height: 106px; }
+.ally-text { background: #3E6670; color: #FFFFFF; padding: 22px; text-align: center; display: flex; flex-direction: column; gap: 8px; flex-grow: 1; }
+.ally-text h3 { font-size: 22px; font-weight: 600; }
+.ally-text p { color: #E3ECEF; font-size: 16px; }
+
+.nums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; text-align: center; }
+@media (max-width: 860px) { .nums { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.num { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.num svg { width: 60px; height: 60px; }
+.num b { font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5vw, 52px); line-height: 1; font-variant-numeric: tabular-nums; }
+.num span { font-weight: 600; color: var(--muted); }
+
+.rooms { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.room { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.room ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 16px; display: flex; flex-direction: column; gap: 4px; }
+@media (max-width: 900px) { .rooms { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .rooms { grid-template-columns: minmax(0, 1fr); } }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.plan { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+.plan.feature { border: 2px solid var(--gold); }
+.plan .freq { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); }
+.plan .price { font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--gold-ink); }
+.plan ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 16px; display: flex; flex-direction: column; gap: 4px; }
+@media (max-width: 900px) { .plans { grid-template-columns: minmax(0, 1fr); } }
+.seasons { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.season { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.season .months { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-ink); }
+.season ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: flex; flex-direction: column; gap: 3px; }
+.season.storm { border: 2px solid var(--slate); }
+@media (max-width: 960px) { .seasons { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .seasons { grid-template-columns: minmax(0, 1fr); } }
+.pm-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.pm-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.pm-item h3 { font-size: 18px; color: var(--gold-ink); }
+.pm-item p { color: var(--muted); font-size: 16px; }
+@media (max-width: 960px) { .pm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .pm-grid { grid-template-columns: minmax(0, 1fr); } }
+.systems { display: flex; flex-direction: column; gap: 12px; }
+.system { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; display: flex; flex-direction: column; gap: 4px; }
+.system p { color: var(--muted); font-size: 16px; }
+.towns { display: flex; flex-wrap: wrap; gap: 8px; }
+.towns span { border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; font-size: 16px; font-weight: 600; color: var(--muted); background: var(--card); }
+
+.posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 960px) { .posts { grid-template-columns: minmax(0, 1fr); } }
+.post { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.post-art { height: 140px; display: flex; align-items: center; justify-content: center; }
+.post-art svg { width: 84px; height: 84px; }
+.post-art.a { background: #1B2D45; } .post-art.b { background: #8A6420; } .post-art.c { background: #2E5059; }
+.post-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; }
+.post-body .date { color: var(--muted); font-size: 14px; }
+.post-body h3 { font-size: 20px; font-weight: 600; }
+.post-body p { color: var(--muted); font-size: 16px; }
+.post-body .k { color: var(--slate); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.article { display: flex; flex-direction: column; gap: 16px; color: var(--muted); max-width: 70ch; }
+.article ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
+.article h2 { font-size: 26px; color: var(--fg); margin-top: 8px; }
+
+.faq { display: flex; flex-direction: column; gap: 10px; }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 0 20px; }
+.faq summary { cursor: pointer; padding: 18px 0; font-family: var(--display); font-weight: 700; font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--gold-ink); font-size: 22px; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding-bottom: 18px; color: var(--muted); }
+
+.cta { background: var(--hero-bg); color: var(--hero-fg); }
+.cta .wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+@media (max-width: 820px) { .cta .wrap { grid-template-columns: minmax(0, 1fr); } }
+.cta .lede { color: var(--hero-muted); }
+.cta .eyebrow { color: var(--gold); }
+.cta .phone-big { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.4vw, 44px); }
+.contact-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 18px; }
+.contact-line { display: flex; flex-direction: column; gap: 2px; }
+.contact-line small { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-ink); font-weight: 700; }
+.contact-line .big { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 38px); user-select: all; }
+.contact-line .mid { font-size: 19px; font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+.copy-msg { font-size: 15px; color: var(--muted); min-height: 1.4em; }
+
+/* Holiday feature */
+.holiday { position: relative; background: #13233A; color: #FFFFFF; overflow: hidden; }
+.holiday .lights { position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 70px; pointer-events: none; }
+.holiday .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; padding-top: 28px; }
+@media (max-width: 860px) { .holiday .wrap { grid-template-columns: minmax(0, 1fr); } }
+.holiday .eyebrow { color: #E8C27A; }
+.holiday h2 em { font-style: normal; color: #E8C27A; }
+.holiday .lede { color: #C8D4DE; }
+.holiday-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 20px; }
+.holiday-list li { display: flex; gap: 10px; align-items: flex-start; font-weight: 600; }
+.holiday-list svg { width: 22px; height: 22px; flex-shrink: 0; margin-top: 3px; }
+@media (max-width: 520px) { .holiday-list { grid-template-columns: minmax(0, 1fr); } }
+.holiday-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(232,194,122,0.45); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.holiday-card .when { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.holiday-card .when div { border-top: 3px solid #C9973A; padding-top: 10px; display: flex; flex-direction: column; gap: 2px; }
+.holiday-card .when b { font-family: var(--display); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #E8C27A; }
+.holiday-card .when span { font-size: 15px; color: #DCE4EA; line-height: 1.4; }
+@media (max-width: 520px) { .holiday-card .when { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: no-preference) {
+  .holiday .bulb { animation: twinkle 3.2s ease-in-out infinite; }
+  .holiday .bulb:nth-child(3n) { animation-delay: -1.1s; }
+  .holiday .bulb:nth-child(3n+1) { animation-delay: -2.2s; }
+  @keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+}
+
+.kevin-photo { background-image: url(data:image/jpeg;base64,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iDQ3ApjkMZsQK5slknY7Y2LabDwt4rCY2ELmISGUUul0myie13J/yv4yloT9DJGxskZFcLE6Yf06GiIGVOhLIJh8LJ7GiBJwphPDQ3Vl4UIIHsNYGhWkS1yYMTs0wQhhMWxkJDHql6b8vUTsvldjgfonDwxjFaCEhfCabJA9EZKoa1CLkQyuCVxrFBUGJEyaGaZ2ENFvYZxBjWEQUTtCqmRBf0idg17cF1C7GYrl7HcfqZAxnJApSyxQDN5bEZc/BeU5ZIeYUqhpBPt6Dk0hSueCSb+CXtsQm7GPLwpiDDcm1UKbIQCysvfCJw3VJtWqNBE59TGMUQFyLZs1EsgoiWSYIY1DR6pUSOEGEIkRphpCUs4BaIErCCCPbC0iMJpdjbaXfWto+EkXxepjwSR4kRJkYiR4CBaxTlQtiKrwUCY5/ANePeE+BOGhKRISIwkQJCVluBtaL7BOCGK4DCRqU5wsMYyCCMQR6HLFDbCRynMifdt4MpCUlM6O14diZiOcxu3s2JQL0LFTZj2W+x9tOxU/Ky8P6aEgg5yIa2NA2J7CGk+GSSW2OxKRNtY5raRYIF6PPM8Mu32fVy7hT/K0TKoY/qSYN+TQy8LQxvZEXPA/75vYhBYWPPvwePX2vZHsIfB5Rph/VmKWGsSOaUbcmPfEib8iEEhIbWzgStJOb/H2+Y0cvDyPbEaU+m1EjaRnjA+0CUJSI1sxq0pGfBM9T//aAAwDAQACAAMAAAAQ99999999999691ezCAAE08+gIx899999999999999999999+m2//AIwwAAPPvNq/7SAtPfffffffffffffffebNv/wD/ALDDAAE88++n/wD6w0+ffffffffffffffevff/68wwAAAnvfPfV//wCsMMav333333333332az//AP7jTDCEX77Dxy1f/wC4ww0PX/PffffffffZvv8A/wDzDDDAHFsAsoSoH9foLDDA/wDvfPffffffeOM9+4wQwxx1c0onq2qFdJKIwwxP/v6PfffffeecwwwwTzxacncuAJL7FuMR2wAAwPv/AO5f33333430EEALDPqsXTAmiumllG/9CAMMT7//APu89998gCACAAAGVGST4uo3zizc5HfUmCDX+/8A1/zfffWQgAAgABPKWWFVUvyL+RXpIinPJg1/v79/7f8A3qIIIIIZ76/yCm0oEZMLknFNcbGB3z/7+v8A/wDBPdgggjruvvvtC3Am6twi9PL6hT+nif8A77t//wD+BMUu+a+++++25RreWWmgCx+zmKYUb2/+/j//AP8A7LN/7777777zics18uiB7vR2EOHaOFX/AO/X/wD/AHgLHz77777773Ua+DURv/fQGXFnOY9IGDzN/wD/APgggvO/vv8A/wD7g8q82SmnGZ5T7Cy6RJeZJL//AP8A34IIL33/APzzzH/8ogfQDYK0W5dAGoUzT97X/wD/APzoII7fzOP/AP8A/PP+Nk9hUWpk7nizGILwF/8A/wD/APfggkvj4/8A/wD/AP8A/wD/AIY/WKKskc+yl5sRURD/AP8A/wD/ACoIIL7/AP8A/wD/AP8A/wD+MACiAw5uwq9yw1ygvb3/AP8A/fggggvvf/8A/wD/AP8AOMMADLyC/hS5GCVwOrIz3/3z6oIIb77/AP8A/wD/ADDDDDBCEbomh6S7nGQ12d19/wAYgggglvvmM88wwwwwwww4GjFmTPTbgXkmRmUcAgggghsvj4Qwwwwwwwww37BIoexOhZ7ZkuoRLaCgggnvnvs2AQwwwwwwxf4dTCZn50k7pqwTsFZxgxggvvvtTvAgwwwww2/hOqfxfvWm1ULzjxOoKJvWsiNvpD/fWwwww/8AtFkT3Fyd/LoJ/wDF5aKhyEZ4zisS+R+99umDHc3AglXxZBOreze2T2g4+iaqBUXC+N3N9999JywByXNocxPZ5829Ghzo0nEx56rMB8ksE999999i01i7ruGCdPw1LMz7Wy+XUJvM7QtFRt99999999vuOiSS+z0BQukecbauzulh8YENFQZ1999999998duiGSOKB9MrgPfc5RtbGqg9g4Val99999999998XqaeeG6EDlbTXJO4+1MTWBP2bc999999999999tDV9trvqPz9640ynAskMnKymt999999999999999NGAb7qOyWaMEJAJfSF2+Pd9999999999999999998MSCKK2+Qi0jv87nfd9999999999999999999999BigiACCCD/AAnH/fffffffffffff/EAB8RAQEBAAIDAQEBAQAAAAAAAAEAERAgITAxQEFRYf/aAAgBAwEBPxD3GcHbJF/zK/OTOp2OiGfxiB+N1KPeGwfmzfcBsGdzkOGjhjwdzjXz6w2DPSG2sFmR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); background-size: cover; background-position: center 40%; }
+.ally-top.photo { height: 260px; padding: 0; }
+.ally-top.photo .kevin-photo { width: 210px; height: 210px; border-radius: 50%; border: 4px solid var(--gold); }
+.meet { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 40px; align-items: center; }
+.meet .kevin-photo { aspect-ratio: 1 / 1; width: 100%; max-width: 380px; justify-self: center; border-radius: 50%; border: 5px solid var(--gold); }
+@media (max-width: 760px) { .meet { grid-template-columns: minmax(0, 1fr); } .meet .kevin-photo { max-width: 360px; } }
+
+/* Footer */
+.foot-wave { display: block; width: 100%; height: 60px; background: var(--hero-bg); }
+footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.foot { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr)); gap: 36px; }
+.foot-about { display: flex; flex-direction: column; gap: 14px; }
+.foot-about svg { width: 220px; height: auto; max-width: 100%; }
+.foot-about p { color: var(--muted); font-size: 16px; }
+.foot-col { display: flex; flex-direction: column; gap: 10px; }
+.foot-col h4 { font-size: 17px; }
+.foot-col .rule { width: 34px; height: 3px; }
+.foot-col a { text-decoration: none; color: var(--muted); font-size: 16px; }
+.foot-col a:hover { color: var(--fg); }
+@media (max-width: 960px) { .foot { grid-template-columns: repeat(2, minmax(0, 1fr)); } .foot-about { grid-column: 1 / -1; } }
+@media (max-width: 520px) { .foot { grid-template-columns: minmax(0, 1fr); } }
+.legal { margin-top: 44px; background: var(--tint); margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-block: 22px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); text-align: center; display: flex; flex-direction: column; gap: 6px; color: var(--muted); font-size: 14px; }
+.legal b { color: var(--fg); font-weight: 600; letter-spacing: 0.04em; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-art .sail-a, .hero-art .sail-b { transform-origin: 200px 124px; animation: luff 6s ease-in-out infinite; }
+  .hero-art .sail-b { animation-delay: -3s; }
+  @keyframes luff { 0%, 100% { transform: skewX(0deg); } 50% { transform: skewX(-1.5deg); } }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#C9973A"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#FFFFFF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"></circle><path d="M10 7l5 5-5 5" stroke="#FFFFFF" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="mark" viewBox="100 30 200 120">
+      <path d="M110 112 L200 40 L290 112" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M252 72 L252 50 L268 50 L268 85" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></path>
+      <line x1="200" y1="58" x2="200" y2="128" stroke="#C9973A" stroke-width="4" stroke-linecap="round"></line>
+      <path d="M205 62 L205 124 L248 124 Z" fill="#6F95A0"></path>
+      <path d="M195 76 L195 124 L166 124 Z" fill="#C9973A"></path>
+      <path d="M156 130 L256 130 L242 145 L170 145 Z" fill="currentColor"></path>
+    </symbol>
+    <symbol id="wave-hero" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0 34 C 300 80, 600 0, 900 34 S 1300 62, 1440 16 L1440 80 L0 80 Z" fill="#C9973A"></path>
+      <path d="M0 48 C 300 94, 600 14, 900 48 S 1300 76, 1440 30 L1440 80 L0 80 Z" fill="#6F95A0"></path>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="row">
+    <a class="brand" href="#home" aria-label="Mainsail Home &amp; Property Services home">
+      <svg aria-hidden="true"><use href="#mark"></use></svg>
+      <span class="brand-name"><b>MAINSAIL</b><span>HOME &amp; PROPERTY SERVICES</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul class="menu">
+        <li class="dd" data-group="handyman">
+          <button type="button" aria-expanded="false">Handyman Services <svg aria-hidden="true"><use href="#chev"></use></svg></button>
+          <ul class="sub">
+            <li><a class="over" href="#handyman-services">All handyman services</a></li>
+            <li><a href="#handyman-repair">Handyman &amp; Home Repair</a></li>
+            <li><a href="#todo-list">To-Do List Chores</a></li>
+            <li><a href="#kitchen">Kitchen Remodeling</a></li>
+            <li><a href="#bath">Bath Remodeling</a></li>
+            <li><a href="#decks">Deck Building &amp; Repairs</a></li>
+            <li><a href="#outdoor">Outside &amp; Yard Work</a></li>
+            <li><a href="#seasonal">Seasonal &amp; Storm Work</a></li>
+            <li><a href="#holiday">Holiday Lighting &amp; Decor</a></li>
+            <li><a href="#realtor">Realtor Services</a></li>
+            <li><a href="#rental">Rental &amp; Property Maintenance</a></li>
+          </ul>
+        </li>
+        <li class="dd" data-group="senior">
+          <button type="button" aria-expanded="false">Senior Services <svg aria-hidden="true"><use href="#chev"></use></svg></button>
+          <ul class="sub">
+            <li><a class="over" href="#senior-services">All senior services</a></li>
+            <li><a href="#aging-in-place">Aging in Place</a></li>
+            <li><a href="#safety-walkthrough">Free Home Safety Walk-Through</a></li>
+            <li><a href="#safety-checklist">Room-by-Room Safety Checklist</a></li>
+            <li><a href="#families">For Families &amp; Caregivers</a></li>
+          </ul>
+        </li>
+        <li class="dd" data-group="plans">
+          <button type="button" aria-expanded="false">Maintenance Plans <svg aria-hidden="true"><use href="#chev"></use></svg></button>
+          <ul class="sub">
+            <li><a class="over" href="#maintenance-plans">Maintenance Plans</a></li>
+            <li><a href="#home-care-calendar">Gulf Coast Home Care Calendar</a></li>
+            <li><a href="#rental-care">Rental Care Plans</a></li>
+          </ul>
+        </li>
+        <li><a class="plain" href="#water-treatment" data-group="water">Water Treatment</a></li>
+        <li class="dd" data-group="about">
+          <button type="button" aria-expanded="false">About <svg aria-hidden="true"><use href="#chev"></use></svg></button>
+          <ul class="sub">
+            <li><a href="#about-mainsail">About Mainsail</a></li>
+            <li><a href="#property-managers">For Property Managers</a></li>
+            <li><a href="#service-area">Service Area</a></li>
+            <li><a href="#faqs">Frequently Asked Questions</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="btn gold mobile-call" href="#contact">Call or text 850-250-2925</a>
+    </nav>
+    <a class="btn gold call" href="#contact">850-250-2925</a>
+    <button class="burger" type="button" id="burger" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HOME -->
+<div class="page" data-page="home" data-title="Mainsail Home Services">
+  <section class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <span class="eyebrow" style="color: var(--gold)">Bay &amp; Walton Counties, Florida</span>
+        <h1>Handyman, remodeling &amp; senior safety services. <em>Let us take care of your home.</em></h1>
+        <p class="sub">Repairs, kitchen and bath updates, aging-in-place upgrades, maintenance plans and RainSoft water treatment from one local pro.</p>
+        <div class="btn-row">
+          <a class="btn gold" href="#contact">Get a free estimate</a>
+          <a class="btn ghost" href="#safety-walkthrough">Free home safety walk-through</a>
+        </div>
+        <div class="meta">
+          <div class="phone"><small>Call or text Kevin</small>850-250-2925</div>
+          <span class="badge"><svg aria-hidden="true"><use href="#check"></use></svg>Authorized RainSoft Representative</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 400 250" role="img" aria-label="Mainsail Home &amp; Property Services logo">
+          <path d="M110 112 L200 40 L290 112" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M252 72 L252 50 L268 50 L268 85" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"></path>
+          <line x1="200" y1="58" x2="200" y2="128" stroke="#C9973A" stroke-width="4" stroke-linecap="round"></line>
+          <path class="sail-a" d="M205 62 L205 124 L248 124 Z" fill="#8FB3BC"></path>
+          <path class="sail-b" d="M195 76 L195 124 L166 124 Z" fill="#C9973A"></path>
+          <path d="M156 130 L256 130 L242 145 L170 145 Z" fill="#FFFFFF"></path>
+          <text x="200" y="196" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="48" letter-spacing="6" fill="#FFFFFF">MAINSAIL</text>
+          <text x="200" y="222" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#E8C27A">HOME &amp; PROPERTY SERVICES</text>
+          <text x="200" y="244" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1.5" fill="#FFFFFF">REMODELING • REPAIRS • PROPERTY CARE</text>
+        </svg>
+      </div>
+    </div>
+    <svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg>
+  </section>
+
+  <section class="band" aria-label="Free offers">
+    <div class="wrap">
+      <div class="offers">
+        <div class="offer"><b>FREE</b><h3>Estimates</h3><p>Tell us what needs fixing and get a clear price, usually within 24 hours.</p></div>
+        <div class="offer"><b>FREE</b><h3>Home safety walk-through</h3><p>We look for fall risks room by room and leave you a written list of fixes.</p></div>
+        <div class="offer"><b>FREE</b><h3>In-home water test</h3><p>We test your tap water at the sink and explain the results in plain English.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band holiday" aria-labelledby="holiday-h">
+    <svg class="lights" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 10 Q 90 50 180 10 T 360 10 T 540 10 T 720 10 T 900 10 T 1080 10 T 1260 10 T 1440 10" fill="none" stroke="#3B4D63" stroke-width="2"></path>
+      <g>
+        <circle class="bulb" cx="45" cy="30" r="7" fill="#E8C27A"></circle><circle class="bulb" cx="135" cy="30" r="7" fill="#8FB3BC"></circle><circle class="bulb" cx="225" cy="30" r="7" fill="#F2E6CF"></circle>
+        <circle class="bulb" cx="315" cy="30" r="7" fill="#E8C27A"></circle><circle class="bulb" cx="405" cy="30" r="7" fill="#8FB3BC"></circle><circle class="bulb" cx="495" cy="30" r="7" fill="#F2E6CF"></circle>
+        <circle class="bulb" cx="585" cy="30" r="7" fill="#E8C27A"></circle><circle class="bulb" cx="675" cy="30" r="7" fill="#8FB3BC"></circle><circle class="bulb" cx="765" cy="30" r="7" fill="#F2E6CF"></circle>
+        <circle class="bulb" cx="855" cy="30" r="7" fill="#E8C27A"></circle><circle class="bulb" cx="945" cy="30" r="7" fill="#8FB3BC"></circle><circle class="bulb" cx="1035" cy="30" r="7" fill="#F2E6CF"></circle>
+        <circle class="bulb" cx="1125" cy="30" r="7" fill="#E8C27A"></circle><circle class="bulb" cx="1215" cy="30" r="7" fill="#8FB3BC"></circle><circle class="bulb" cx="1305" cy="30" r="7" fill="#F2E6CF"></circle>
+        <circle class="bulb" cx="1395" cy="30" r="7" fill="#E8C27A"></circle>
+      </g>
+    </svg>
+    <div class="wrap">
+      <div class="head" style="gap: 16px">
+        <span class="eyebrow">Now booking for the holidays</span>
+        <h2 id="holiday-h">Holiday lights and decorations, <em>without the ladder</em></h2>
+        <p class="lede">We hang the lights, set up the decorations and take it all down after New Year's. Perfect for busy families, seniors who shouldn't be on a ladder, and rentals that need to look festive.</p>
+        <ul class="holiday-list">
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Roofline &amp; gutter lights</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Tree &amp; bush wrapping</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Wreaths, garland &amp; bows</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Yard displays &amp; inflatables</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Indoor tree &amp; decor setup</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Timers &amp; outdoor outlet checks</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Attic &amp; garage bin retrieval</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Takedown &amp; labeled storage</li>
+        </ul>
+      </div>
+      <div class="holiday-card">
+        <h3>How holiday service works</h3>
+        <div class="when">
+          <div><b>Book</b><span>Call or text by early December for the best dates.</span></div>
+          <div><b>Install</b><span>We use your decorations, test every strand and set timers.</span></div>
+          <div><b>Takedown</b><span>After New Year's we take it down, label it and store it.</span></div>
+        </div>
+        <p style="color: #DCE4EA; font-size: 16px">Use your own lights and decorations, or ask us to pick up what you need.</p>
+        <div class="btn-row"><a class="btn gold" href="#holiday">See holiday services</a><a class="btn ghost" href="#contact">Book your install</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap intro">
+      <div class="intro-art">
+        <svg class="tools" viewBox="0 0 300 300" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40 150 L150 50 L260 150" stroke="#C9973A" stroke-width="10"></path>
+          <rect x="70" y="160" width="40" height="90" rx="4" stroke="#FFFFFF" stroke-width="6"></rect>
+          <path d="M70 185 h40 M70 210 h40" stroke="#FFFFFF" stroke-width="4"></path>
+          <path d="M135 165 v85" stroke="#8FB3BC" stroke-width="8"></path>
+          <rect x="122" y="140" width="26" height="30" rx="4" fill="#8FB3BC"></rect>
+          <path d="M175 250 l35 -90" stroke="#FFFFFF" stroke-width="7"></path>
+          <path d="M200 150 l30 12 l-8 20 l-30 -12 z" fill="#FFFFFF"></path>
+          <rect x="225" y="190" width="30" height="60" rx="5" stroke="#C9973A" stroke-width="6"></rect>
+          <circle cx="240" cy="230" r="7" stroke="#C9973A" stroke-width="4"></circle>
+          <path d="M60 268 h180" stroke="#8FB3BC" stroke-width="6"></path>
+          <path d="M80 268 v-8 M110 268 v-12 M140 268 v-8 M170 268 v-12 M200 268 v-8" stroke="#8FB3BC" stroke-width="4"></path>
+        </svg>
+        <div class="stamp"><svg aria-hidden="true"><use href="#mark"></use></svg></div>
+      </div>
+      <div class="intro-list">
+        <div class="head"><span class="eyebrow">Our services</span><h2>Everything your home needs, inside and out</h2></div>
+        <div class="head" style="gap: 6px"><h3><a href="#handyman-services">Handyman &amp; home repair</a></h3><p>From a sticking door to a full punch list, Mainsail keeps your home working and looking its best.</p></div>
+        <div class="head" style="gap: 6px"><h3><a href="#senior-services">Senior home modifications</a></h3><p>Safety and accessibility changes that help seniors stay in the homes they love.</p></div>
+        <div class="head" style="gap: 6px"><h3><a href="#maintenance-plans">Ongoing maintenance plans</a></h3><p>Scheduled visits that handle the small jobs before they turn into big ones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint">
+    <div class="wrap">
+      <div class="head center"><span class="eyebrow">What we do</span><h2>Our services</h2><div class="rule"></div></div>
+      <div class="cards" data-cards="all"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head center"><span class="eyebrow">Who we serve</span><h2>Our handyman and home services are tailored to…</h2><div class="rule"></div></div>
+      <div class="aud">
+        <div class="aud-card"><div class="aud-art a"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="40" r="16" stroke="#FFFFFF" stroke-width="6"></circle><path d="M30 100c0-17 13-30 30-30s30 13 30 30" stroke="#FFFFFF" stroke-width="6"></path><circle cx="92" cy="30" r="12" stroke="#C9973A" stroke-width="5"></circle><path d="M92 22v8l5 4" stroke="#C9973A" stroke-width="4"></path></svg></div><div class="aud-text"><h3>Busy Adults</h3><p>Between work and everything else, the house falls behind. Let us take the worry out of home maintenance.</p></div></div>
+        <div class="aud-card"><div class="aud-art b"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="44" cy="36" r="13" stroke="#FFFFFF" stroke-width="6"></circle><circle cx="78" cy="38" r="12" stroke="#FFFFFF" stroke-width="6"></circle><path d="M22 100c0-15 10-26 22-26s22 11 22 26M58 100c0-14 9-24 20-24s20 10 20 24" stroke="#FFFFFF" stroke-width="6"></path></svg></div><div class="aud-text"><h3>Active Seniors</h3><p>You used to handle every project yourself. Now you'd rather spend the time on other things. We're here to help.</p></div></div>
+        <div class="aud-card"><div class="aud-art c"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 58 L60 24 L102 58" stroke="#FFFFFF" stroke-width="7"></path><circle cx="45" cy="62" r="10" stroke="#FFFFFF" stroke-width="5"></circle><circle cx="75" cy="62" r="10" stroke="#FFFFFF" stroke-width="5"></circle><path d="M30 104c0-12 7-20 15-20M90 104c0-12-7-20-15-20" stroke="#FFFFFF" stroke-width="5"></path></svg></div><div class="aud-text"><h3>Growing Families</h3><p>Kids, jobs and schedules pull you in every direction. We'll keep the house in shape and lighten the load.</p></div></div>
+        <div class="aud-card"><div class="aud-art b"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 16l38 14v28c0 26-17 41-38 48c-21-7-38-22-38-48V30z" stroke="#FFFFFF" stroke-width="6"></path><path d="M44 62l12 12 22-24" stroke="#C9973A" stroke-width="7"></path></svg></div><div class="aud-text"><h3>Aging-in-Place Seniors</h3><p>You love your home. We make the safety changes that help you stay there comfortably for years to come.</p></div></div>
+        <div class="aud-card"><div class="aud-art c"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="38" r="14" stroke="#FFFFFF" stroke-width="6"></circle><path d="M24 100c0-16 12-28 26-28 8 0 14 3 19 8" stroke="#FFFFFF" stroke-width="6"></path><circle cx="88" cy="68" r="9" stroke="#1B2D45" stroke-width="5"></circle><path d="M70 104c0-12 8-20 18-20s18 8 18 20" stroke="#1B2D45" stroke-width="5"></path></svg></div><div class="aud-text"><h3>Adult Children</h3><p>Worried about a parent's house? We'll take care of it and text you photos after every visit.</p></div></div>
+        <div class="aud-card"><div class="aud-art a"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="30" y="20" width="44" height="84" rx="3" stroke="#FFFFFF" stroke-width="6"></rect><path d="M42 36h8M58 36h4M42 52h8M58 52h4M42 68h8M58 68h4M48 104V88h10v16" stroke="#FFFFFF" stroke-width="5"></path><path d="M80 104V60h20v44" stroke="#C9973A" stroke-width="6"></path></svg></div><div class="aud-text"><h3>Property Managers</h3><p>Fast turnovers, clear quotes and photo proof. One vendor for the small jobs that keep units rented.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sky">
+    <div class="wrap">
+      <div class="head center"><span class="eyebrow">About Mainsail</span><h2>Meet your home service ally</h2><div class="rule"></div></div>
+      <div class="ally" data-ally></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head center"><span class="eyebrow">By the numbers</span><h2>What you get with Mainsail</h2><div class="rule"></div></div>
+      <div class="nums">
+        <div class="num"><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="var(--slate)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="8" width="40" height="50" rx="4"></rect><path d="M22 22h20M22 32h20M22 42h12"></path></svg><b>40+</b><span>Services offered</span></div>
+        <div class="num"><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="var(--slate)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M32 58s-18-17-18-31a18 18 0 0 1 36 0c0 14-18 31-18 31z"></path><circle cx="32" cy="27" r="7"></circle></svg><b>10</b><span>Towns served</span></div>
+        <div class="num"><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="var(--slate)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="34" r="22"></circle><path d="M32 22v12l8 6M26 6h12"></path></svg><b>24 hr</b><span>Typical quote turnaround</span></div>
+        <div class="num"><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="var(--slate)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="22" width="44" height="34" rx="3"></rect><path d="M10 32h44M32 22v34"></path></svg><b>3</b><span>Free offers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint">
+    <div class="wrap">
+      <div class="head center"><span class="eyebrow">Useful reading</span><h2>Tips for a safer, easier home</h2><div class="rule"></div></div>
+      <div class="posts" data-posts></div>
+    </div>
+  </section>
+</div>
+
+<!-- HANDYMAN OVERVIEW -->
+<div class="page" data-page="handyman-services" data-title="Handyman Services | Mainsail" data-group="handyman" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Handyman Services</span></div><h1>Handyman <em>services</em></h1><p class="lede">Need help around the house? We want to be your first call. One stubborn job or a long list, inside or out, Mainsail keeps your home in great shape.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band"><div class="wrap"><div class="cards" data-cards="handyman"></div></div></section>
+  <section class="band tint">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">Full service list</span><h2>If it's on your list, it's probably on ours</h2><p class="lede">Don't see your job? Call or text a photo and we'll tell you if we can handle it.</p></div>
+      <div class="rooms">
+        <div class="room"><h3>Inside the home</h3><ul><li>Drywall repair &amp; texture</li><li>Interior painting</li><li>Door install &amp; adjustment</li><li>Lock &amp; deadbolt replacement</li><li>Baseboard &amp; trim</li><li>Shelving &amp; closet systems</li><li>TV &amp; picture hanging</li><li>Furniture assembly</li></ul></div>
+        <div class="room"><h3>Kitchen &amp; bath</h3><ul><li>Cabinet install &amp; repair</li><li>Countertop replacement</li><li>Backsplash tile</li><li>Vanity replacement</li><li>Faucet &amp; fixture swaps</li><li>Tub &amp; shower re-caulk</li><li>Exhaust fans</li><li>Light fixture updates</li></ul></div>
+        <div class="room"><h3>Outside &amp; upkeep</h3><ul><li>Pressure washing</li><li>Deck repair &amp; sealing</li><li>Fence &amp; gate repair</li><li>Gutter cleaning</li><li>Screen repair</li><li>Hurricane shutter help</li><li>Debris &amp; junk haul-off</li><li>Seasonal maintenance</li></ul></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SERVICE DETAIL (generated) -->
+<div class="page" data-page="service" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#handyman-services">Handyman Services</a><span>/</span><span data-s="crumb"></span></div><h1 data-s="title"></h1><p class="lede" data-s="lede"></p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap split">
+      <div class="head" style="gap: 24px">
+        <div class="prose" data-s="body"></div>
+        <div class="head" style="gap: 14px"><h2 style="font-size: 26px">What's included</h2><ul class="checks" data-s="included"></ul></div>
+        <div class="head" style="gap: 14px"><h2 style="font-size: 26px">Good to know</h2><div class="prose" data-s="notes"></div></div>
+      </div>
+      <aside class="side">
+        <span class="eyebrow">Free estimate</span>
+        <h3>Get a price for this job</h3>
+        <p style="color: var(--muted); font-size: 16px">Call or text Kevin. A photo of the job helps us quote faster.</p>
+        <span class="ph">850-250-2925</span>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Written price before work starts</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>On time, or we call</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Clean job site</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Before-and-after photos</li>
+        </ul>
+        <a class="btn gold" href="#contact">Contact us</a>
+      </aside>
+    </div>
+  </section>
+  <section class="band tint"><div class="wrap" style="gap: 18px"><h2 style="font-size: 26px">Related services</h2><div class="related" data-s="related"></div></div></section>
+</div>
+
+<!-- SENIOR OVERVIEW -->
+<div class="page" data-page="senior-services" data-title="Senior Services | Mainsail" data-group="senior" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Senior Services</span></div><h1>Senior <em>services</em></h1><p class="lede">Most falls happen at home. Small changes like a grab bar, a handrail or a brighter hallway can make the difference between staying home and moving out.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap">
+      <div class="cards">
+        <a class="card" href="#aging-in-place"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M9 15l2 2 4-4"></path></svg></div><h3>Aging in Place</h3></div><p style="color: var(--muted); font-size: 16px">Safety and accessibility upgrades that help seniors stay independent at home.</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>
+        <a class="card" href="#safety-walkthrough"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg></div><h3>Free Home Safety Walk-Through</h3></div><p style="color: var(--muted); font-size: 16px">We find the risks room by room and give you a written plan with prices.</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>
+        <a class="card" href="#safety-checklist"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v2h6V3M8.5 10l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"></path></svg></div><h3>Room-by-Room Checklist</h3></div><p style="color: var(--muted); font-size: 16px">What to look for in every room of a parent's home.</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>
+        <a class="card" href="#families"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7" r="3"></circle><circle cx="17" cy="8" r="2.5"></circle><path d="M3 20c0-3.5 2.5-6 5-6s5 2.5 5 6M13 20c0-2.8 1.8-5 4-5s4 2.2 4 5"></path></svg></div><h3>For Families &amp; Caregivers</h3></div><p style="color: var(--muted); font-size: 16px">Help for a parent's home, with photo updates by text after every visit.</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>
+        <a class="card" href="#bath"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M6 12V5a2 2 0 0 1 4 0"></path></svg></div><h3>Safer Bathrooms</h3></div><p style="color: var(--muted); font-size: 16px">Grab bars, seats, hand-held showers and comfort-height toilets.</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>
+        <a class="card" href="#maintenance-plans"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M4 10h16M9 15l2 2 4-4"></path></svg></div><h3>Worry-Free Plan</h3></div><p style="color: var(--muted); font-size: 16px">Quarterly visits for batteries, filters, safety checks and small repairs.</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- AGING IN PLACE -->
+<div class="page" data-page="aging-in-place" data-title="Aging in Place | Mainsail" data-group="senior" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#senior-services">Senior Services</a><span>/</span><span>Aging in Place</span></div><h1>Stay safe and independent <em>in the home you love</em></h1><p class="lede">We help seniors and their families find the risks and fix them, with patience and respect.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap split">
+      <div class="head" style="gap: 24px">
+        <div class="prose"><p>Most seniors want to stay in their own homes as long as they can. The biggest threat to that is usually a fall, and most falls happen in the bathroom, on stairs or on the way to the bathroom at night.</p><p>The good news is that the fixes are usually simple, affordable and done in a day or two. A sturdy grab bar, a second handrail and better lighting can make a home dramatically safer without making it look like a hospital.</p></div>
+        <div class="head" style="gap: 14px"><h2 style="font-size: 26px">Common aging-in-place upgrades</h2>
+          <ul class="checks"><li><svg aria-hidden="true"><use href="#check"></use></svg>Grab bars in tubs and showers</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Stair and entry handrails</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Lever door handles</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Brighter lights and night lights</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Non-slip floors and tubs</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Shower and raised toilet seats</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Hand-held shower heads</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Removing trip hazards</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Lower shelves and closet rods</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Smoke and CO detectors</li></ul>
+        </div>
+        <h2 style="font-size: 26px">Our aging-in-place process</h2>
+        <ol class="steps">
+          <li><div><h3>Free walk-through</h3><p>We walk through the home together and note loose rugs, dark stairs, slick tubs and hard-to-turn knobs.</p></div></li>
+          <li><div><h3>Written plan with prices</h3><p>You get a simple list of fixes, most important first, with a price for each. No pressure.</p></div></li>
+          <li><div><h3>Installed right</h3><p>Grab bars go into studs or proper anchors, rails are solid, and we clean up before we leave.</p></div></li>
+          <li><div><h3>Ongoing check-ins</h3><p>Add a maintenance plan and we come back each season to check batteries, filters and the small stuff.</p></div></li>
+        </ol>
+      </div>
+      <aside class="side"><span class="eyebrow">Free</span><h3>Book a home safety walk-through</h3><p style="color: var(--muted); font-size: 16px">No cost and no obligation. You get a written list of fixes with prices.</p><span class="ph">850-250-2925</span><a class="btn gold" href="#contact">Contact us</a><a class="btn ghost" href="#safety-checklist">See the checklist</a></aside>
+    </div>
+  </section>
+</div>
+
+<!-- SAFETY WALKTHROUGH -->
+<div class="page" data-page="safety-walkthrough" data-title="Free Home Safety Walk-Through | Mainsail" data-group="senior" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#senior-services">Senior Services</a><span>/</span><span>Safety Walk-Through</span></div><h1>Free home safety <em>walk-through</em></h1><p class="lede">About an hour, room by room, with a written list of fixes and prices when we're done.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap split">
+      <div class="head" style="gap: 24px">
+        <div class="prose"><p>A fresh set of eyes catches things you stop noticing when you live with them every day: the rug that curls, the dim stairway, the tub with nothing to hold onto.</p><p>We look at the home the way a person with weaker balance, eyesight or grip would move through it, and we point out what would help most.</p></div>
+        <h2 style="font-size: 26px">What happens during the visit</h2>
+        <ol class="steps">
+          <li><div><h3>We talk first</h3><p>What's getting harder? Stairs, the shower, getting up at night? We start with what matters to you.</p></div></li>
+          <li><div><h3>Room-by-room check</h3><p>Bathroom, bedroom, stairs, kitchen, entry and outside, using our safety checklist.</p></div></li>
+          <li><div><h3>Written plan</h3><p>A list of fixes, most important first, with a price for each. Keep it even if you hire someone else.</p></div></li>
+          <li><div><h3>You decide</h3><p>Do one fix, all of them, or none. There's no pressure and no charge for the visit.</p></div></li>
+        </ol>
+        <p class="note">Adult children are welcome to join by phone or video, or we can send them the written plan and photos.</p>
+      </div>
+      <aside class="side"><span class="eyebrow">No cost</span><h3>Schedule your walk-through</h3><span class="ph">850-250-2925</span><p style="color: var(--muted); font-size: 16px">Evenings and weekends available.</p><a class="btn gold" href="#contact">Contact us</a></aside>
+    </div>
+  </section>
+</div>
+
+<!-- CHECKLIST -->
+<div class="page" data-page="safety-checklist" data-title="Room-by-Room Safety Checklist | Mainsail" data-group="senior" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#senior-services">Senior Services</a><span>/</span><span>Safety Checklist</span></div><h1>Room-by-room <em>safety checklist</em></h1><p class="lede">Use this list to check a parent's home yourself, or call and we'll walk it with you for free.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap">
+      <div class="rooms">
+        <div class="room"><h3>Bathroom</h3><ul><li>Grab bars by the toilet and in the tub or shower</li><li>Non-slip surface in the tub</li><li>Shower seat and hand-held shower</li><li>Raised or comfort-height toilet</li><li>Night light on the path from the bed</li></ul></div>
+        <div class="room"><h3>Stairs &amp; halls</h3><ul><li>Solid handrails on both sides</li><li>Light switches at top and bottom</li><li>No loose carpet or worn treads</li><li>Contrast tape on step edges</li><li>Clear walkways with no cords</li></ul></div>
+        <div class="room"><h3>Bedroom</h3><ul><li>Lamp or switch reachable from bed</li><li>Clear path to the bathroom</li><li>Motion night lights</li><li>Smoke and CO detector nearby</li><li>Closet rods and shelves within reach</li></ul></div>
+        <div class="room"><h3>Kitchen</h3><ul><li>Everyday items on lower shelves</li><li>Bright light over counters and stove</li><li>Lever-style faucet</li><li>Working smoke detector</li><li>Non-slip mats or no rugs</li></ul></div>
+        <div class="room"><h3>Entry &amp; doors</h3><ul><li>Lever handles instead of knobs</li><li>Railing at porch and entry steps</li><li>Low or no threshold to trip on</li><li>Bright porch light</li><li>Key lockbox for caregivers</li></ul></div>
+        <div class="room"><h3>Outside</h3><ul><li>Even walkways with no lifted pavers</li><li>Clean, non-slick steps and decks</li><li>Working motion lights</li><li>Railings tight and secure</li><li>House number visible for responders</li></ul></div>
+      </div>
+      <div class="btn-row"><a class="btn gold" href="#safety-walkthrough">Book a free walk-through</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- FAMILIES -->
+<div class="page" data-page="families" data-title="For Families &amp; Caregivers | Mainsail" data-group="senior" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#senior-services">Senior Services</a><span>/</span><span>Families &amp; Caregivers</span></div><h1>Help for a parent's home, <em>even from far away</em></h1><p class="lede">You can't always be there to fix the leaky faucet or change the smoke detector battery. We can.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap split">
+      <div class="head" style="gap: 24px">
+        <div class="prose"><p>Many of our senior customers are set up by their adult children. You make one call, we take care of the house, and you get photos and a short report after every visit so you know exactly what was done.</p></div>
+        <h2 style="font-size: 26px">How we work with families</h2>
+        <ul class="checks"><li><svg aria-hidden="true"><use href="#check"></use></svg>One point of contact for the whole family</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Photo updates by text after every visit</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Invoices sent to whoever pays</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Patient, respectful work with your parent</li><li><svg aria-hidden="true"><use href="#check"></use></svg>We flag anything that looks unsafe</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Quarterly plans so nothing gets missed</li></ul>
+        <p class="note">Visiting for the holidays? It's a good time to look around. Read our <a href="#post-parent-signs">7 signs a parent's home needs safety upgrades</a>.</p>
+      </div>
+      <aside class="side"><span class="eyebrow">Start here</span><h3>Set up service for a parent</h3><span class="ph">850-250-2925</span><a class="btn gold" href="#contact">Contact us</a></aside>
+    </div>
+  </section>
+</div>
+
+<!-- MAINTENANCE PLANS -->
+<div class="page" data-page="maintenance-plans" data-title="Maintenance Plans | Mainsail" data-group="plans" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Maintenance Plans</span></div><h1>Worry-free maintenance, <em>on a schedule</em></h1><p class="lede">Skip the ladder and the long to-do list. Pick a plan and we keep up with the small jobs before they turn into big ones.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap">
+      <div class="plans">
+        <div class="plan"><span class="freq">One visit</span><h3>Home checkup</h3><span class="price">Call for pricing</span><ul><li>Smoke and CO detector batteries</li><li>HVAC filter change</li><li>Light bulbs and fixtures</li><li>List of anything that needs attention</li></ul></div>
+        <div class="plan feature"><span class="freq">Every 3 months</span><h3>Worry-Free Plan</h3><span class="price">Call for pricing</span><ul><li>Everything in the checkup</li><li>Caulk, grout and weatherstrip touch-ups</li><li>Safety check of rails and grab bars</li><li>Priority scheduling</li><li>Photo report for family</li></ul></div>
+        <div class="plan"><span class="freq">For landlords</span><h3>Rental care</h3><span class="price">Call for pricing</span><ul><li>Seasonal unit inspections</li><li>Small repairs on the spot</li><li>Turnover help between tenants</li><li>Photos for owners</li></ul></div>
+      </div>
+      <div class="btn-row"><a class="btn gold" href="#contact">Ask about a plan</a><a class="btn ghost" href="#home-care-calendar">See the home care calendar</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- CALENDAR -->
+<div class="page" data-page="home-care-calendar" data-title="Gulf Coast Home Care Calendar | Mainsail" data-group="plans" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#maintenance-plans">Maintenance Plans</a><span>/</span><span>Home Care Calendar</span></div><h1>Gulf Coast <em>home care calendar</em></h1><p class="lede">Salt air, summer storms and humidity are hard on a house. Here's what your Florida home needs through the year.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap">
+      <div class="seasons">
+        <div class="season"><span class="months">Mar – May</span><h3>Spring</h3><ul><li>Pressure wash siding, drives and decks</li><li>Check AC filter before the heat</li><li>Re-caulk windows and doors</li><li>Test smoke and CO detectors</li></ul></div>
+        <div class="season storm"><span class="months">Jun – Nov</span><h3>Hurricane season</h3><ul><li>Check shutters and storm panels</li><li>Clean gutters and downspouts</li><li>Secure loose fences, gates and railings</li><li>After-storm repair visits</li></ul></div>
+        <div class="season"><span class="months">Sep – Nov</span><h3>Fall</h3><ul><li>Seal deck and wood surfaces</li><li>Check weatherstripping</li><li>Inspect roofline and soffits</li><li>Swap filters and batteries</li></ul></div>
+        <div class="season"><span class="months">Dec – Feb</span><h3>Winter</h3><ul><li>Indoor repairs and touch-up paint</li><li>Kitchen and bath projects</li><li>Safety walk-through for the holidays</li><li>Plan spring projects</li></ul></div>
+      </div>
+      <p class="note">On the Worry-Free Plan, these visits are scheduled for you. <a href="#post-hurricane">Read our hurricane prep checklist.</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- RENTAL CARE -->
+<div class="page" data-page="rental-care" data-title="Rental Care Plans | Mainsail" data-group="plans" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#maintenance-plans">Maintenance Plans</a><span>/</span><span>Rental Care</span></div><h1>Rental care <em>plans</em></h1><p class="lede">Scheduled inspections and on-the-spot repairs that protect your rental and keep tenants happy.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap split">
+      <div class="head" style="gap: 24px">
+        <div class="prose"><p>Small problems in rentals grow fast because tenants often don't report them. A seasonal visit catches the slow drip, the failing caulk and the dead smoke detector before they turn into water damage or a liability.</p></div>
+        <h2 style="font-size: 26px">Each visit includes</h2>
+        <ul class="checks"><li><svg aria-hidden="true"><use href="#check"></use></svg>Smoke and CO detector test</li><li><svg aria-hidden="true"><use href="#check"></use></svg>HVAC filter change</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Check under sinks for leaks</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Caulk and grout touch-ups</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Doors, locks and windows check</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Photo report for the owner</li></ul>
+      </div>
+      <aside class="side"><span class="eyebrow">Landlords</span><h3>Ask about rental care</h3><span class="ph">850-250-2925</span><a class="btn gold" href="#contact">Contact us</a><a class="btn ghost" href="#property-managers">For property managers</a></aside>
+    </div>
+  </section>
+</div>
+
+<!-- WATER -->
+<div class="page" data-page="water-treatment" data-title="RainSoft Water Treatment | Mainsail" data-group="water" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Water Treatment</span></div><h1>What's really <em>in your water?</em></h1><span class="badge"><svg aria-hidden="true"><use href="#check"></use></svg>Authorized RainSoft Representative</span><p class="lede">Hard water leaves spots on dishes, scale on fixtures and film on your skin. A free in-home test shows exactly what's in your tap water and what will fix it.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap split even">
+      <div class="head" style="gap: 20px">
+        <h2 style="font-size: 26px">What better water does for you</h2>
+        <ul class="checks"><li><svg aria-hidden="true"><use href="#check"></use></svg>Softer skin and hair</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Spot-free dishes and glasses</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Less soap scum and scale</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Brighter, longer-lasting clothes</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Protects pipes and appliances</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Use less soap and detergent</li></ul>
+        <h2 style="font-size: 26px">How the free water test works</h2>
+        <ol class="steps"><li><div><h3>We test at your sink</h3><p>About 30 minutes, right in your kitchen.</p></div></li><li><div><h3>We explain the results</h3><p>Hardness, chlorine and other common issues, in plain English.</p></div></li><li><div><h3>You see your options</h3><p>If treatment makes sense, we show which system fits your home. No obligation.</p></div></li></ol>
+      </div>
+      <div class="systems">
+        <div class="system"><h3>Water softeners</h3><p>Remove the hard minerals that cause spots, scale and dry skin.</p></div>
+        <div class="system"><h3>Drinking water</h3><p>Reverse osmosis at the kitchen tap for clean, great-tasting water.</p></div>
+        <div class="system"><h3>Whole-house filtration</h3><p>Carbon filtration for every faucet and shower in the home.</p></div>
+        <p class="note">Every system is sized to your water, your home and your household, and backed by RainSoft's Limited Lifetime Warranty.</p>
+        <a class="btn gold" href="#contact">Book a free water test</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" data-page="about-mainsail" data-title="About Mainsail" data-group="about" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>About</span></div><h1>Meet your <em>home service ally</em></h1><p class="lede">Local, owner-operated and easy to reach.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band"><div class="wrap meet"><div class="kevin-photo" role="img" aria-label="Kevin, owner of Mainsail Home &amp; Property Services"></div><div class="prose"><span class="eyebrow">Owner</span><h2 style="font-size: 34px; color: var(--fg)">Hi, I'm Kevin.</h2><p>I started Mainsail to be the kind of home service company I'd want for my own family: one that shows up on time, gives you the price up front, does the job right and cleans up after.</p><p>When you call Mainsail, you get me. I'm your point of contact from the first call to the final walk-through. I match every job with one of our skilled technicians, keep you updated along the way, and make sure the work is done right before we call it finished.</p><div class="btn-row"><a class="btn gold" href="#contact">Call or text Kevin</a></div></div></div></section>
+  <section class="band sky"><div class="wrap"><div class="ally" data-ally></div></div></section>
+  <section class="band tint">
+    <div class="wrap split">
+      <div class="prose"><h2 style="font-size: 30px; color: var(--fg)">Why "Mainsail"?</h2><p>On a sailboat, the mainsail is what keeps you moving steady and on course. That's what we want to be for your home: the dependable crew that keeps everything running, through calm days and storm season.</p><p>Mainsail is run by Kevin, your point of contact from start to finish. Our skilled technicians do the work, and Kevin stays with you through every step, from the first call to the final walk-through.</p></div>
+      <div class="head" style="gap: 14px"><h3>The Mainsail way</h3><ul class="checks" style="grid-template-columns: minmax(0, 1fr)"><li><svg aria-hidden="true"><use href="#check"></use></svg>On time, or we call</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Written price before work starts</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Drop cloths down, job site swept clean</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Before-and-after photos with every job</li></ul></div>
+    </div>
+  </section>
+</div>
+
+<!-- PROPERTY MANAGERS -->
+<div class="page" data-page="property-managers" data-title="For Property Managers | Mainsail" data-group="about" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Property Managers</span></div><h1>A maintenance vendor <em>that answers the phone</em></h1><p class="lede">For property managers, landlords, HOAs and senior living communities. Send a work order or punch list and we handle it, with photos and one clear invoice.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap">
+      <div class="pm-grid">
+        <div class="pm-item"><h3>24-hour quotes</h3><p>Send the work order today, get a price tomorrow.</p></div>
+        <div class="pm-item"><h3>Photo proof</h3><p>Before-and-after photos with every invoice for your owners.</p></div>
+        <div class="pm-item"><h3>One vendor</h3><p>Paint, patch, blinds, hardware and haul-off in one trip.</p></div>
+        <div class="pm-item"><h3>Vendor-ready</h3><p>W-9 provided for your vendor file. Ask about insurance.</p></div>
+      </div>
+      <div class="split even">
+        <div class="head" style="gap: 14px"><h2 style="font-size: 26px">Make-ready checklist, handled</h2><ul class="checks"><li><svg aria-hidden="true"><use href="#check"></use></svg>Wall patching &amp; touch-up paint</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Door, lock &amp; hardware swaps</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Blinds replaced &amp; hung</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Caulking, trim &amp; baseboards</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Cabinet doors &amp; drawer fixes</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Pressure washing</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Deck, fence &amp; gate repair</li><li><svg aria-hidden="true"><use href="#check"></use></svg>Junk &amp; debris haul-off</li></ul></div>
+        <aside class="side"><span class="eyebrow">Vendor setup</span><h3>Add Mainsail to your vendor list</h3><p style="color: var(--muted); font-size: 16px">Call or email and we'll send a W-9 and our service details.</p><span class="ph">850-250-2925</span><a class="btn gold" href="#contact">Contact us</a></aside>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SERVICE AREA -->
+<div class="page" data-page="service-area" data-title="Service Area | Mainsail" data-group="about" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Service Area</span></div><h1>Serving Bay &amp; Walton Counties, <em>Panama City to Destin</em></h1><p class="lede">Evenings and weekends available.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap">
+      <div class="split even">
+        <div class="head" style="gap: 14px"><h3>Bay County</h3><div class="towns"><span>Panama City</span><span>Panama City Beach</span><span>Lynn Haven</span><span>Callaway</span><span>Southport</span></div></div>
+        <div class="head" style="gap: 14px"><h3>Walton &amp; Okaloosa</h3><div class="towns"><span>Inlet Beach</span><span>Santa Rosa Beach</span><span>Miramar Beach</span><span>Destin</span><span>Freeport</span></div></div>
+      </div>
+      <p class="note">Don't see your town? Call or text and ask.</p>
+    </div>
+  </section>
+</div>
+
+<!-- FAQ -->
+<div class="page" data-page="faqs" data-title="FAQs | Mainsail" data-group="about" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>FAQs</span></div><h1>Frequently asked <em>questions</em></h1></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap">
+      <div class="faq">
+        <details><summary>How fast can you come out?</summary><p>Most estimates go out within 24 hours. Small repairs can often be scheduled the same week.</p></details>
+        <details><summary>Is the home safety walk-through really free?</summary><p>Yes. We walk through the home, point out risks and leave a written list with prices. You decide what, if anything, to fix.</p></details>
+        <details><summary>Do you work with property management companies?</summary><p>Yes. We handle turnovers, work orders and punch lists, and send before-and-after photos with every invoice.</p></details>
+        <details><summary>What does the water test involve?</summary><p>We test your tap water right at the sink in about 30 minutes, explain the results and show you the options. There's no obligation.</p></details>
+        <details><summary>Is there a minimum charge?</summary><p>Yes, a small minimum covers the trip for very short jobs. Bundle a few small items into one visit to get the most out of it.</p></details>
+        <details><summary>Do you do electrical and plumbing?</summary><p>We handle minor fixture swaps and repairs. Work that requires a licensed electrician or plumber is done by licensed trade partners, and we'll tell you up front.</p></details>
+        <details><summary>Do you buy the materials?</summary><p>We can pick up everything for the job, or use materials you already have. Materials are listed separately on your quote.</p></details>
+        <details><summary>Can you help after a storm?</summary><p>Yes. After a storm we help with fence and gate repair, debris haul-off, screen and soffit repairs and getting your home back in shape.</p></details>
+        <details><summary>How do I pay?</summary><p>You'll get an invoice by text or email after the job, and you can pay by card or bank transfer.</p></details>
+        <details><summary>Can family members set up service for a parent?</summary><p>Absolutely. We'll keep you updated by text with photos after each visit.</p></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- BLOG -->
+<div class="page" data-page="blog" data-title="Blog | Mainsail" data-group="about" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Blog</span></div><h1>Useful <em>reading</em></h1><p class="lede">Tips for a safer, easier home on the Gulf Coast.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band"><div class="wrap"><div class="posts" data-posts></div></div></section>
+</div>
+
+<!-- BLOG POST (generated) -->
+<div class="page" data-page="post" data-group="about" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><a href="#blog">Blog</a></div><h1 data-p="title"></h1><p class="lede" data-p="date"></p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band"><div class="wrap"><article class="article" data-p="body"></article><div class="btn-row"><a class="btn ghost" href="#blog">Back to all articles</a><a class="btn gold" href="#contact">Contact us</a></div></div></section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" data-page="contact" data-title="Contact | Mainsail" data-group="about" hidden>
+  <section class="banner"><div class="wrap"><div class="crumbs"><a href="#home">Home</a><span>/</span><span>Contact</span></div><h1>Get in touch, <em>tell us what needs doing</em></h1><p class="lede">Call or text Kevin for a free estimate, a home safety walk-through or a water test. Send a photo of the job and you'll often get a price the same day.</p></div><svg class="wave" aria-hidden="true"><use href="#wave-hero"></use></svg></section>
+  <section class="band">
+    <div class="wrap split even">
+      <div class="contact-card">
+        <div class="contact-line"><small>Call or text</small><span class="big" id="phone-text">850-250-2925</span></div>
+        <div class="contact-line"><small>Email</small><span class="mid">kevin@mainsailhomeservices.com</span></div>
+        <div class="contact-line"><small>Hours</small><span class="mid">Mon – Sat, evenings &amp; weekends by appointment</span></div>
+        <div class="contact-line"><small>Service area</small><span class="mid">Bay &amp; Walton Counties, Panama City to Destin</span></div>
+        <div class="btn-row">
+          <a class="btn gold" href="tel:+18502502925">Call now</a>
+          <a class="btn ghost" href="sms:+18502502925">Send a text</a>
+          <button class="btn ghost" type="button" id="copy-phone">Copy number</button>
+        </div>
+        <p class="copy-msg" id="copy-msg" aria-live="polite"></p>
+      </div>
+      <div class="head" style="gap: 16px">
+        <h2 style="font-size: 26px">How it works</h2>
+        <ol class="steps">
+          <li><div><h3>Call or text</h3><p>A photo of the job helps us quote faster.</p></div></li>
+          <li><div><h3>Get a price</h3><p>Small jobs often the same day. Larger projects get a visit and a written quote.</p></div></li>
+          <li><div><h3>Pick a time</h3><p>We schedule around you, including evenings and weekends.</p></div></li>
+          <li><div><h3>Job done right</h3><p>We finish, clean up, show you the work and send photos with the invoice.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Shared call-to-action (hidden on contact) -->
+<section class="band cta" id="shared-cta">
+  <div class="wrap">
+    <div class="head" style="gap: 12px"><span class="eyebrow">Get started</span><h2>Ready to check something off your list?</h2><p class="lede">Free estimates, free home safety walk-throughs and free water tests across Bay and Walton Counties.</p></div>
+    <div class="head" style="gap: 14px"><span class="phone-big">850-250-2925</span><div class="btn-row"><a class="btn gold" href="#contact">Contact us</a><a class="btn ghost" href="#services-list" data-go="handyman-services">View services</a></div></div>
+  </div>
+</section>
+</main>
+
+<svg class="foot-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 0 H1440 V18 C 1100 60, 700 8, 300 44 S 60 34, 0 26 Z" fill="#C9973A"></path>
+  <path d="M0 0 H1440 V8 C 1100 50, 700 -2, 300 34 S 60 24, 0 16 Z" fill="var(--hero-bg)"></path>
+  <path d="M0 60 V32 C 60 40, 200 52, 300 50 C 700 16, 1100 66, 1440 26 V60 Z" fill="var(--bg)"></path>
+</svg>
+<footer>
+  <div class="foot">
+    <div class="foot-about">
+      <svg viewBox="0 0 400 230" role="img" aria-label="Mainsail Home &amp; Property Services logo">
+        <path d="M110 112 L200 40 L290 112" fill="none" stroke="var(--logo-ink)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M252 72 L252 50 L268 50 L268 85" fill="none" stroke="var(--logo-ink)" stroke-width="10" stroke-linejoin="round"></path>
+        <line x1="200" y1="58" x2="200" y2="128" stroke="#C9973A" stroke-width="4" stroke-linecap="round"></line>
+        <path d="M205 62 L205 124 L248 124 Z" fill="var(--logo-sail)"></path>
+        <path d="M195 76 L195 124 L166 124 Z" fill="#C9973A"></path>
+        <path d="M156 130 L256 130 L242 145 L170 145 Z" fill="var(--logo-ink)"></path>
+        <text x="200" y="196" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="48" letter-spacing="6" fill="var(--logo-ink)">MAINSAIL</text>
+        <text x="200" y="222" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="var(--logo-sail)">HOME &amp; PROPERTY SERVICES</text>
+      </svg>
+      <p>Mainsail Home &amp; Property Services helps busy adults, families and seniors keep their homes safe and worry-free with handyman repairs, kitchen and bath updates, senior home modifications, maintenance plans, rental make-readies and RainSoft water treatment.</p>
+      <p style="font-weight: 700; color: var(--fg)">850-250-2925 • kevin@mainsailhomeservices.com</p>
+    </div>
+    <div class="foot-col"><h4>Handyman</h4><div class="rule"></div><a href="#handyman-repair">Home repair</a><a href="#kitchen">Kitchen remodeling</a><a href="#bath">Bath remodeling</a><a href="#decks">Decks</a><a href="#outdoor">Outside &amp; yard</a><a href="#seasonal">Seasonal &amp; storm</a><a href="#holiday">Holiday lighting</a></div>
+    <div class="foot-col"><h4>Seniors &amp; plans</h4><div class="rule"></div><a href="#aging-in-place">Aging in place</a><a href="#safety-walkthrough">Safety walk-through</a><a href="#safety-checklist">Safety checklist</a><a href="#families">Families</a><a href="#maintenance-plans">Maintenance plans</a><a href="#water-treatment">Water treatment</a></div>
+    <div class="foot-col"><h4>Welcome to Mainsail</h4><div class="rule"></div><a href="#about-mainsail">About Mainsail</a><a href="#property-managers">Property managers</a><a href="#service-area">Service area</a><a href="#faqs">FAQs</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div>
+  </div>
+  <div class="legal">
+    <b>COPYRIGHT © 2026 MAINSAIL HOME &amp; PROPERTY SERVICES, LLC. ALL RIGHTS RESERVED.</b>
+    <span>Locally owned and operated in Bay and Walton Counties, Florida. Work requiring a state license is performed by licensed trade partners.</span>
+    <span>RainSoft is a trademark of its owner. Mainsail is an authorized RainSoft representative.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var ICONS = {
+    repair: '<path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M14.5 13.5l3 3M16 12l1.5-1.5 2 2L18 14"></path>',
+    todo: '<rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v2h6V3M8.5 10l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"></path>',
+    bath: '<path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M6 12V5a2 2 0 0 1 4 0M7 20l-1 2M17 20l1 2"></path>',
+    kitchen: '<rect x="4" y="3" width="16" height="18" rx="1"></rect><path d="M4 11h16M14 7h2M14 15h2"></path>',
+    deck: '<path d="M3 10h18M3 14h18"></path><path d="M5 14v6M19 14v6M12 14v6M5 10V6M19 10V6"></path>',
+    outdoor: '<path d="M3 20h18"></path><path d="M6 20v-6l4-3 4 3v6"></path><path d="M17 20v-9M15 13l2-2 2 2"></path>',
+    seasonal: '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"></path>',
+    realtor: '<path d="M4 21V5M4 5h12v7H4"></path><path d="M7 8h6"></path><path d="M13 21v-5h6v5"></path>',
+    rental: '<rect x="5" y="3" width="14" height="18" rx="1"></rect><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"></path>',
+    holiday: '<path d="M2 6c3 3 7 4 10 4s7-1 10-4"></path><path d="M6 9v2M12 10v2M18 9v2"></path><circle cx="6" cy="13" r="1.6"></circle><circle cx="12" cy="14" r="1.6"></circle><circle cx="18" cy="13" r="1.6"></circle>'
+  };
+  var SERVICES = [
+    { id: 'handyman-repair', icon: 'repair', title: 'Handyman & Home Repair', short: 'The everyday fixes that keep a home working, done right the first time.',
+      lede: 'From a sticking door to a hole in the wall, we fix the things that wear out and break around the house.',
+      body: ['Every home needs repairs. Doors stop latching, drywall gets dinged, trim pulls loose and caulk cracks. These small problems are easy to live with until they pile up.', 'Mainsail handles them quickly and neatly, with a written price up front and a clean job site when we leave.'],
+      included: ['Drywall holes, cracks and texture', 'Sticking doors and loose hinges', 'Lock and deadbolt replacement', 'Trim, baseboards and caulking', 'Shelves, rods and wall mounting', 'Window and screen repair', 'Cabinet door and drawer fixes', 'Minor fixture swaps'],
+      notes: ['Bundle several small repairs into one visit to save on trip charges.', 'Work that needs a licensed electrician or plumber is handled by licensed trade partners.'],
+      related: ['todo-list', 'kitchen', 'bath'] },
+    { id: 'todo-list', icon: 'todo', title: 'To-Do List Chores', short: 'Hand us the list. We knock out several small jobs in one visit.',
+      lede: 'Hand us your honey-do list and get your weekend back.',
+      body: ['Everyone has a list of small jobs that never seem to get done. They are rarely hard, but they take time, tools and sometimes a ladder.', 'Text us your list (photos help) and we will price it as one visit and work through it top to bottom.'],
+      included: ['Light bulbs and hard-to-reach fixtures', 'Smoke and CO detector batteries', 'HVAC filter changes', 'Furniture assembly', 'TV and picture hanging', 'Blinds and curtain rods', 'Weatherstripping', 'Closet and garage shelving'],
+      notes: ['A list of 5 to 10 small items usually fits in one visit.', 'Ask about our Worry-Free Plan to have these handled every season.'],
+      related: ['handyman-repair', 'seasonal', 'outdoor'] },
+    { id: 'kitchen', icon: 'kitchen', title: 'Kitchen Remodeling', short: 'Make the kitchen feel new without gutting it.',
+      lede: 'New cabinets, counters, tile and lighting can make a kitchen feel brand new in days, not months.',
+      body: ['Most kitchens don’t need to be torn down to the studs. Replacing or refinishing cabinets, adding a backsplash and updating lighting and hardware gives you a fresh, modern kitchen for a fraction of the cost.', 'We start with a walk-through, talk about what bothers you about the space and what you want, and give you a line-by-line written quote.'],
+      included: ['Shaker-style cabinet installs', 'Cabinet hardware and paint refresh', 'Countertop replacement', 'Backsplash tile', 'Sinks and faucets', 'Under-cabinet lighting', 'Open shelving', 'Pantry and storage upgrades'],
+      notes: ['We protect floors and contain dust, clean up daily and send progress photos.', 'Plumbing, electrical and permitted work is handled by licensed trade partners.'],
+      related: ['bath', 'handyman-repair', 'realtor'] },
+    { id: 'bath', icon: 'bath', title: 'Bath Remodeling', short: 'Bathroom refreshes and full updates, with safety built in.',
+      lede: 'A cleaner, brighter, safer bathroom, from a simple refresh to a full update.',
+      body: ['Bathrooms take the most wear and are where most falls happen. A bath update is the perfect time to make the room both better looking and safer.', 'We can plan grab bars, a shower seat and a hand-held shower into the design so the room looks great and works for years.'],
+      included: ['Vanities and mirrors', 'Tile floors and shower walls', 'Tub and shower updates', 'Comfort-height toilets', 'Grab bars and hand-held showers', 'Lighting and exhaust fans', 'Re-caulking and re-grouting', 'Non-slip treatments'],
+      notes: ['Ask about aging-in-place bathroom upgrades for parents or yourself.', 'Plumbing and electrical work requiring a license is handled by licensed trade partners.'],
+      related: ['kitchen', 'aging-in-place', 'handyman-repair'] },
+    { id: 'decks', icon: 'deck', title: 'Deck Building & Repairs', short: 'Safe, solid decks, porches and steps.',
+      lede: 'Florida sun and salt air are hard on wood. We keep decks safe, solid and good looking.',
+      body: ['Loose boards, wobbly railings and rotting steps are more than an eyesore. They are a real fall risk, especially for kids and seniors.', 'We repair what can be saved, replace what can’t, and seal everything so it lasts.'],
+      included: ['Board and railing replacement', 'Loose or wobbly stair repair', 'Cleaning and pressure washing', 'Sealing and staining', 'Small new decks and landings', 'Porch and entry step repair'],
+      notes: ['Fall is a great time to clean and seal before winter.', 'New structures that require a permit are quoted with permitting included.'],
+      related: ['outdoor', 'seasonal', 'handyman-repair'] },
+    { id: 'outdoor', icon: 'outdoor', title: 'Outside & Yard Work', short: 'Curb appeal and outdoor repairs.',
+      lede: 'Clean, repaired and ready for company, from the driveway to the back fence.',
+      body: ['The outside of your home is the first thing people see and the part that takes the most weather. Regular cleaning and quick repairs keep small issues from turning into rot or damage.'],
+      included: ['Pressure washing drives, siding and decks', 'Fence and gate repair', 'Gutter cleaning', 'Exterior caulk and paint touch-ups', 'Screen and screen-door repair', 'Junk and debris haul-off'],
+      notes: ['Pressure washing in spring keeps mildew from taking hold in the humidity.'],
+      related: ['decks', 'seasonal', 'realtor'] },
+    { id: 'seasonal', icon: 'seasonal', title: 'Seasonal & Storm Work', short: 'Hurricane prep, after-storm repairs and seasonal checkups.',
+      lede: 'Get ready before storm season and get back to normal after it.',
+      body: ['Hurricane season runs June through November. Most storm damage starts small: a loose gate, a clogged gutter, a weak screen.', 'We help you prepare before a storm and handle the cleanup and repairs after one.'],
+      included: ['Shutter and storm panel help', 'Gutter and downspout cleaning', 'Securing fences, gates and railings', 'Re-caulking windows and doors', 'After-storm debris removal', 'Fence, screen and soffit repairs'],
+      notes: ['See our Gulf Coast home care calendar for what to do each season.'],
+      related: ['holiday', 'outdoor', 'decks'] },
+    { id: 'holiday', icon: 'holiday', nocard: true, title: 'Holiday Lighting & Decorating', short: 'Lights up, decorations set, and everything taken down after New Year’s.',
+      lede: 'We hang the lights, set up the decorations and take it all down after the holidays, so you never have to climb a ladder.',
+      body: ['Every year, holiday decorating sends people to the emergency room from ladder falls, and it’s one of the most common ways seniors get hurt at home. It also eats up a whole weekend for busy families.', 'Mainsail handles the whole job. We bring the ladders, test every strand, hang everything neatly, set timers, and come back after New Year’s to take it down, label it and put it away.'],
+      included: ['Roofline and gutter lights', 'Tree and bush wrapping', 'Wreaths, garland and bows', 'Yard displays and inflatables', 'Indoor tree and decor setup', 'Timers and outdoor outlet checks', 'Retrieving bins from the attic or garage', 'Takedown and labeled storage'],
+      notes: ['Book by early December for the best install dates.', 'We use your lights and decorations, or we can pick up what you need.', 'Rentals and storefronts welcome.', 'Electrical work beyond plugging into existing outdoor outlets is handled by a licensed electrician.'],
+      related: ['seasonal', 'outdoor', 'todo-list'] },
+    { id: 'realtor', icon: 'realtor', title: 'Realtor Services', short: 'Help homes sell faster and close on time.',
+      lede: 'Pre-listing repairs and inspection fix lists, done fast so your closing stays on schedule.',
+      body: ['Small defects cost sellers money at the negotiating table. A quick round of repairs, paint and cleanup before listing helps a home show better and sell faster.', 'After inspection, send us the repair list and we will price it and get it done on your timeline.'],
+      included: ['Pre-listing repairs and touch-ups', 'Inspection repair lists', 'Paint, caulk and patching', 'Pressure washing and curb appeal', 'Fixture and hardware updates', 'Invoices and photos for your file'],
+      notes: ['Realtors: keep our number handy for clients who need a quick, reliable handyman.'],
+      related: ['handyman-repair', 'outdoor', 'kitchen'] },
+    { id: 'rental', icon: 'rental', title: 'Rental & Property Maintenance', short: 'A reliable vendor for property managers and landlords.',
+      lede: 'Turnovers, work orders and punch lists, done fast with photo proof.',
+      body: ['Vacant units cost money every day. We help property managers and landlords turn units quickly and keep occupied ones in good repair.', 'Send a work order and get a quote within 24 hours, then before-and-after photos with every invoice.'],
+      included: ['Unit turnovers and make-readies', 'Wall patching and touch-up paint', 'Blinds, locks and hardware swaps', 'Work orders with 24-hour quotes', 'Seasonal unit inspections', 'Junk and debris haul-off'],
+      notes: ['W-9 provided for your vendor file.', 'See our For Property Managers page for vendor setup.'],
+      related: ['handyman-repair', 'outdoor', 'realtor'] }
+  ];
+  var POSTS = [
+    { id: 'post-hurricane', art: 'a', title: 'Hurricane Prep for Emerald Coast Homes: A Simple Checklist', date: 'October 2026', excerpt: 'A little work before storm season can save thousands in repairs. Here’s where to start.',
+      icon: '<path d="M45 12c-14 0-26 9-26 22h52c0-13-12-22-26-22z" stroke="#FFFFFF" stroke-width="5"></path><path d="M45 34v34a6 6 0 0 1-12 0" stroke="#FFFFFF" stroke-width="5"></path><path d="M20 78l10-12M38 82l8-12M58 80l8-12" stroke="#C9973A" stroke-width="5"></path>',
+      body: '<p>Hurricane season runs June 1 through November 30. Most storm damage to homes starts small: a loose gate becomes a projectile, a clogged gutter sends water into the soffits, a weak screen tears and lets rain blow in.</p><h2>Before the season</h2><ul><li>Test shutters or storm panels and make sure every piece and fastener is labeled and stored where you can reach it.</li><li>Clean gutters and downspouts so heavy rain drains away from the house.</li><li>Tighten or repair loose fence boards, gates and railings.</li><li>Re-caulk gaps around windows and doors.</li><li>Trim back anything hanging over the roof.</li><li>Take photos of each room for insurance records.</li></ul><h2>When a storm is coming</h2><ul><li>Bring in or tie down patio furniture, grills and planters.</li><li>Install shutters early, before the stores and roads get busy.</li><li>Check that sump pumps and generators work.</li></ul><h2>After the storm</h2><p>Walk the outside of the house in daylight. Look for lifted shingles, damaged soffits, torn screens and leaning fences, and take photos before anything is moved. We help with debris removal and repairs once it’s safe.</p>' },
+    { id: 'post-parent-signs', art: 'b', title: '7 Signs a Parent’s Home Needs Safety Upgrades', date: 'October 2026', excerpt: 'When you visit, look past the conversation and notice the house. It often tells you more.',
+      icon: '<path d="M14 46 L45 20 L76 46" stroke="#FFFFFF" stroke-width="5"></path><path d="M22 42v34h46V42" stroke="#FFFFFF" stroke-width="5"></path><circle cx="45" cy="56" r="9" stroke="#1B2D45" stroke-width="5"></circle><path d="M45 50v6l4 3" stroke="#1B2D45" stroke-width="4"></path>',
+      body: '<p>Parents rarely mention the small struggles. They may not want to worry you, or they may not notice how much they have adjusted. These signs suggest it’s time for a few simple changes:</p><ul><li><strong>They hold onto furniture or walls</strong> to get around the house.</li><li><strong>The shower or tub goes unused,</strong> or bathing has become a chore.</li><li><strong>Bulbs are burned out</strong> in halls and stairways.</li><li><strong>Rugs curl at the edges</strong> or slide on the floor.</li><li><strong>Round doorknobs and twist faucets</strong> are hard to turn.</li><li><strong>Stairs have one rail,</strong> or none.</li><li><strong>Small repairs pile up</strong> that they used to fix themselves.</li></ul><h2>What to do next</h2><p>Most of these fixes take a few hours: grab bars, a second handrail, brighter bulbs and night lights, lever handles and removing loose rugs. A free home safety walk-through gives you a written list, most important first, with a price for each.</p>' },
+    { id: 'post-hard-water', art: 'c', title: 'Hard Water: What It’s Doing to Your Home', date: 'October 2026', excerpt: 'White spots, crusty faucets and dry skin all point to the same cause.',
+      icon: '<path d="M45 12c10 13 20 24 20 36a20 20 0 0 1-40 0c0-12 10-23 20-36z" stroke="#FFFFFF" stroke-width="5"></path><path d="M36 52a10 10 0 0 0 10 8" stroke="#C9973A" stroke-width="5"></path>',
+      body: '<p>Hard water carries dissolved minerals, mostly calcium and magnesium. When it heats up or dries, those minerals stay behind as scale.</p><h2>Signs you have hard water</h2><ul><li>Spots on glasses and shower doors that won’t wipe off.</li><li>Crusty buildup on faucets and shower heads.</li><li>Water heaters and dishwashers that wear out early.</li><li>Soap that doesn’t lather and leaves a film on skin and hair.</li><li>Laundry that comes out stiff or dull.</li></ul><h2>What you can do</h2><p>The only way to know what’s in your water is to test it. A free in-home test takes about 30 minutes and shows which fix, if any, makes sense for your home, whether that’s a softener, drinking water system or whole-house filtration.</p>' }
+  ];
+  var ALLY = '<div class="ally-card"><div class="ally-top photo"><div class="kevin-photo" role="img" aria-label="Kevin, owner of Mainsail Home &amp; Property Services"></div></div><div class="ally-text"><h3>Kevin, Owner</h3><p>Your point of contact from start to finish. Kevin handles your call, your quote and your final walk-through.</p></div></div>' +
+    '<div class="ally-card"><div class="ally-top"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="52" r="30" stroke="#FFFFFF" stroke-width="6"></circle><path d="M46 52l10 10 18-20" stroke="#C9973A" stroke-width="7"></path><path d="M42 80l-8 28 26-12 26 12-8-28" stroke="#FFFFFF" stroke-width="6"></path></svg></div><div class="ally-text"><h3>Skilled Technicians</h3><p>Experienced pros matched to each job, with written prices before work starts, a clean job site and before-and-after photos.</p></div></div>' +
+    '<div class="ally-card"><div class="ally-top"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 100s-38-22-38-50a20 20 0 0 1 38-9a20 20 0 0 1 38 9c0 28-38 50-38 50z" stroke="#FFFFFF" stroke-width="6"></path><path d="M44 58h10l6-12 8 22 6-10h8" stroke="#C9973A" stroke-width="6"></path></svg></div><div class="ally-text"><h3>We Care</h3><p>A local business built to serve our neighbors from Panama City to Destin, especially the seniors who built these communities.</p></div></div>';
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function byId(id) { for (var i = 0; i < SERVICES.length; i++) if (SERVICES[i].id === id) return SERVICES[i]; return null; }
+  function cardHTML(s) {
+    return '<a class="card" href="#' + s.id + '"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + ICONS[s.icon] + '</svg></div><h3>' + esc(s.title) + '</h3></div><p style="color: var(--muted); font-size: 16px">' + esc(s.short) + '</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>';
+  }
+  function postCard(p) {
+    return '<a class="post" href="#' + p.id + '"><div class="post-art ' + p.art + '"><svg viewBox="0 0 90 90" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">' + p.icon + '</svg></div><div class="post-body"><span class="date">' + p.date + '</span><h3>' + esc(p.title) + '</h3><p>' + esc(p.excerpt) + '</p><span class="k">Keep reading</span></div></a>';
+  }
+  document.querySelectorAll('[data-cards]').forEach(function (el) { el.innerHTML = SERVICES.filter(function (s) { return !s.nocard; }).map(cardHTML).join(''); });
+  document.querySelectorAll('[data-posts]').forEach(function (el) { el.innerHTML = POSTS.map(postCard).join(''); });
+  document.querySelectorAll('[data-ally]').forEach(function (el) { el.innerHTML = ALLY; });
+
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var svcPage = document.querySelector('[data-page="service"]');
+  var postPage = document.querySelector('[data-page="post"]');
+  var cta = document.getElementById('shared-cta');
+  var nav = document.getElementById('nav');
+  var burger = document.getElementById('burger');
+  var dds = Array.prototype.slice.call(document.querySelectorAll('.dd'));
+
+  function fillService(s) {
+    svcPage.querySelector('[data-s="crumb"]').textContent = s.title;
+    svcPage.querySelector('[data-s="title"]').innerHTML = esc(s.title);
+    svcPage.querySelector('[data-s="lede"]').textContent = s.lede;
+    svcPage.querySelector('[data-s="body"]').innerHTML = s.body.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
+    svcPage.querySelector('[data-s="included"]').innerHTML = s.included.map(function (i) { return '<li><svg aria-hidden="true"><use href="#check"></use></svg>' + esc(i) + '</li>'; }).join('');
+    svcPage.querySelector('[data-s="notes"]').innerHTML = '<ul>' + s.notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
+    svcPage.querySelector('[data-s="related"]').innerHTML = s.related.map(function (r) {
+      var x = byId(r); if (x) return '<a href="#' + x.id + '">' + esc(x.title) + '</a>';
+      if (r === 'aging-in-place') return '<a href="#aging-in-place">Aging in Place</a>';
+      return '';
+    }).join('') + '<a href="#handyman-services">All handyman services</a>';
+  }
+  function fillPost(p) {
+    postPage.querySelector('[data-p="title"]').textContent = p.title;
+    postPage.querySelector('[data-p="date"]').textContent = p.date;
+    postPage.querySelector('[data-p="body"]').innerHTML = p.body;
+  }
+  function closeMenus() { dds.forEach(function (d) { d.classList.remove('open'); d.querySelector('button').setAttribute('aria-expanded', 'false'); }); }
+  function closeMobile() { nav.classList.remove('show'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Open menu'); }
+
+  function route() {
+    var id = (location.hash || '#home').slice(1) || 'home';
+    var target = null, group = null, title = 'Mainsail Home Services';
+    var svc = byId(id);
+    var post = null; POSTS.forEach(function (p) { if (p.id === id) post = p; });
+    if (svc) { fillService(svc); target = svcPage; group = svc.id === 'rental' ? 'handyman' : 'handyman'; title = svc.title + ' | Mainsail'; }
+    else if (post) { fillPost(post); target = postPage; group = 'about'; title = post.title + ' | Mainsail'; }
+    else {
+      pages.forEach(function (p) { if (p.getAttribute('data-page') === id) target = p; });
+      if (!target) { target = pages[0]; id = 'home'; }
+      group = target.getAttribute('data-group');
+      title = target.getAttribute('data-title') || title;
+    }
+    pages.forEach(function (p) { p.hidden = p !== target; });
+    cta.hidden = id === 'contact';
+    document.title = title.replace(/&amp;/g, '&');
+    dds.forEach(function (d) { d.classList.toggle('current', d.getAttribute('data-group') === group); });
+    document.querySelectorAll('.menu a').forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('current', on || (a.classList.contains('plain') && a.getAttribute('data-group') === group));
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    closeMenus(); closeMobile();
+    window.scrollTo(0, 0);
+  }
+
+  dds.forEach(function (d) {
+    var b = d.querySelector('button');
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = !d.classList.contains('open');
+      closeMenus();
+      if (willOpen) { d.classList.add('open'); b.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.dd')) closeMenus(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeMenus(); closeMobile(); } });
+  burger.addEventListener('click', function () {
+    var open = !nav.classList.contains('show');
+    nav.classList.toggle('show', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  var go = document.querySelector('[data-go]');
+  if (go) go.setAttribute('href', '#handyman-services');
+
+  window.addEventListener('hashchange', route);
+  route();
+
+  var btn = document.getElementById('copy-phone');
+  var msg = document.getElementById('copy-msg');
+  var text = document.getElementById('phone-text');
+  function selectText() { try { var r = document.createRange(); r.selectNodeContents(text); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {} }
+  btn.addEventListener('click', function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText('850-250-2925').then(function () { msg.textContent = 'Copied 850-250-2925.'; })
+        .catch(function () { selectText(); msg.textContent = 'Number selected. Copy it from your menu.'; });
+    } else { selectText(); msg.textContent = 'Number selected. Copy it from your menu.'; }
+  });
+})();
+</script>
