@@ -303,6 +303,13 @@ a { color: inherit; }
 .holiday-list li { display: flex; gap: 10px; align-items: flex-start; font-weight: 600; }
 .holiday-list svg { width: 22px; height: 22px; flex-shrink: 0; margin-top: 3px; }
 @media (max-width: 520px) { .holiday-list { grid-template-columns: minmax(0, 1fr); } }
+.holiday-slim { padding-block: 40px; }
+.holiday-slim .wrap { grid-template-columns: minmax(0, 1fr) auto; gap: 24px; padding-top: 30px; }
+.holiday-slim h2 { font-size: clamp(24px, 3vw, 30px); }
+.holiday-slim .lede { font-size: 17px; }
+@media (max-width: 860px) { .holiday-slim .wrap { grid-template-columns: minmax(0, 1fr); } }
+.bath-figure { min-width: 0; }
+.bath-art { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 30px rgba(15,26,40,0.12); }
 .holiday-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(232,194,122,0.45); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
 .holiday-card .when { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .holiday-card .when div { border-top: 3px solid #C9973A; padding-top: 10px; display: flex; flex-direction: column; gap: 2px; }
@@ -382,6 +389,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
             <li><a href="#handyman-repair">Handyman &amp; Home Repair</a></li>
             <li><a href="#todo-list">To-Do List Chores</a></li>
             <li><a href="#kitchen">Kitchen Cabinet Updates</a></li>
+            <li><a href="#bath">Bathroom Remodels &amp; Upgrades</a></li>
             <li><a href="#flooring">Flooring: LVP &amp; Tile</a></li>
             <li><a href="#painting">Interior &amp; Exterior Painting</a></li>
             <li><a href="#decks">Decks &amp; Fencing</a></li>
@@ -440,7 +448,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
       <div class="copy">
         <span class="eyebrow" style="color: var(--gold)">Bay &amp; Walton Counties, Florida</span>
         <h1>Home repairs, upgrades &amp; senior safety. <em>Let us take care of your home.</em></h1>
-        <p class="sub">Repairs, painting, kitchen cabinet updates, aging-in-place upgrades, window coverings, maintenance plans, water treatment and air quality from one local pro.</p>
+        <p class="sub">Repairs, painting, kitchen cabinet updates, bathroom remodels, aging-in-place upgrades, window coverings, maintenance plans, water treatment and air quality from one local pro.</p>
         <div class="btn-row">
           <a class="btn gold" href="#contact">Get a free estimate</a>
           <a class="btn ghost" href="#safety-walkthrough">Free home safety walk-through</a>
@@ -478,7 +486,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
   </section>
 
 
-  <section class="band holiday" aria-labelledby="holiday-h">
+  <section class="band holiday holiday-slim" aria-labelledby="holiday-h">
     <svg class="lights" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0 10 Q 90 50 180 10 T 360 10 T 540 10 T 720 10 T 900 10 T 1080 10 T 1260 10 T 1440 10" fill="none" stroke="#3B4D63" stroke-width="2"></path>
       <g>
@@ -491,31 +499,12 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
       </g>
     </svg>
     <div class="wrap">
-      <div class="head" style="gap: 16px">
+      <div class="head" style="gap: 10px">
         <span class="eyebrow">Now booking for the holidays</span>
-        <h2 id="holiday-h">Holiday lights and decorations, <em>without the ladder</em></h2>
-        <p class="lede">We hang the lights, set up the decorations and take it all down after New Year's. Perfect for busy families, seniors who shouldn't be on a ladder, and rentals that need to look festive.</p>
-        <ul class="holiday-list">
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Roofline &amp; gutter lights</li>
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Tree &amp; bush wrapping</li>
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Wreaths, garland &amp; bows</li>
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Yard displays &amp; inflatables</li>
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Indoor tree &amp; decor setup</li>
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Timers &amp; plug-in setup</li>
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Attic &amp; garage bin retrieval</li>
-          <li><svg aria-hidden="true"><use href="#check"></use></svg>Takedown &amp; labeled storage</li>
-        </ul>
+        <h2 id="holiday-h">Holiday lights, <em>without the ladder</em></h2>
+        <p class="lede">We hang the lights, set timers, and take it all down after New Year's.</p>
       </div>
-      <div class="holiday-card">
-        <h3>How holiday service works</h3>
-        <div class="when">
-          <div><b>Book</b><span>Call or text by early December for the best dates.</span></div>
-          <div><b>Install</b><span>We use your decorations, test every strand and set timers.</span></div>
-          <div><b>Takedown</b><span>After New Year's we take it down, label it and store it.</span></div>
-        </div>
-        <p style="color: #DCE4EA; font-size: 16px">Use your own lights and decorations, or ask us to pick up what you need.</p>
-        <div class="btn-row"><a class="btn gold" href="#holiday">See holiday services</a><a class="btn ghost" href="#contact">Book your install</a></div>
-      </div>
+      <div class="btn-row"><a class="btn gold" href="#holiday">Holiday lighting</a><a class="btn ghost" href="#contact">Book your install</a></div>
     </div>
   </section>
 
@@ -542,7 +531,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
         <div class="head" style="gap: 6px"><h3><a href="#handyman-services">Handyman &amp; home repair</a></h3><p>From a sticking door to a full punch list, Mainsail keeps your home working and looking its best.</p></div>
         <div class="head" style="gap: 6px"><h3><a href="#senior-services">Senior home modifications</a></h3><p>Safety and accessibility changes that help seniors stay in the homes they love.</p></div>
         <div class="head" style="gap: 6px"><h3><a href="#kitchen">Kitchen cabinet updates</a></h3><p>New Shaker-style cabinets, countertops, backsplash and hardware, without gutting the room. Samples brought to your door.</p></div>
-        <div class="head" style="gap: 6px"><h3><a href="#contact">Bathroom upgrades</a></h3><p>Ask us about refreshing your bathroom and making it safer and easier to use.</p></div>
+        <div class="head" style="gap: 6px"><h3><a href="#bath">Bathroom remodels &amp; upgrades</a></h3><p>New vanities, tile, walk-in showers and fixtures, with grab bars and safety features built right into the design.</p></div>
         <div class="head" style="gap: 6px"><h3><a href="#window-coverings">Window coverings</a></h3><p>Shutters, blinds and shades, measured in your home and installed by a pro with 30+ years of experience.</p></div>
         <div class="head" style="gap: 6px"><h3><a href="#maintenance-plans">Ongoing maintenance plans</a></h3><p>Scheduled visits that handle the small jobs before they turn into big ones.</p></div>
       </div>
@@ -983,7 +972,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
       <p>Mainsail Home &amp; Property Services helps busy adults, families and seniors keep their homes safe and worry-free with handyman repairs, painting, kitchen cabinet updates, senior home modifications, maintenance plans, rental make-readies, water treatment and air quality services.</p>
       <p style="font-weight: 700; color: var(--fg)">850-250-2925 • kevin@mainsailhomeservices.com</p>
     </div>
-    <div class="foot-col"><h4>Handyman</h4><div class="rule"></div><a href="#handyman-repair">Home repair</a><a href="#kitchen">Kitchen cabinet updates</a><a href="#flooring">Flooring</a><a href="#painting">Painting</a><a href="#decks">Decks &amp; fencing</a><a href="#outdoor">Outside &amp; yard</a><a href="#seasonal">Seasonal &amp; storm</a><a href="#holiday">Holiday lighting</a><a href="#window-coverings">Window coverings</a></div>
+    <div class="foot-col"><h4>Handyman</h4><div class="rule"></div><a href="#handyman-repair">Home repair</a><a href="#kitchen">Kitchen cabinet updates</a><a href="#bath">Bathroom remodels</a><a href="#flooring">Flooring</a><a href="#painting">Painting</a><a href="#decks">Decks &amp; fencing</a><a href="#outdoor">Outside &amp; yard</a><a href="#seasonal">Seasonal &amp; storm</a><a href="#holiday">Holiday lighting</a><a href="#window-coverings">Window coverings</a></div>
     <div class="foot-col"><h4>Seniors &amp; plans</h4><div class="rule"></div><a href="#aging-in-place">Aging in place</a><a href="#safety-walkthrough">Safety walk-through</a><a href="#safety-checklist">Safety checklist</a><a href="#families">Families</a><a href="#maintenance-plans">Maintenance plans</a><a href="#water-treatment">Water &amp; air quality</a></div>
     <div class="foot-col"><h4>Welcome to Mainsail</h4><div class="rule"></div><a href="#about-mainsail">About Mainsail</a><a href="#property-managers">Property managers</a><a href="#service-area">Service area</a><a href="#faqs">FAQs</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div>
   </div>
@@ -1005,6 +994,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
     outdoor: '<path d="M3 20h18"></path><path d="M6 20v-6l4-3 4 3v6"></path><path d="M17 20v-9M15 13l2-2 2 2"></path>',
     seasonal: '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"></path>',
     realtor: '<path d="M4 21V5M4 5h12v7H4"></path><path d="M7 8h6"></path><path d="M13 21v-5h6v5"></path>',
+    water: '<path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"></path><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"></path>',
     rental: '<rect x="5" y="3" width="14" height="18" rx="1"></rect><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"></path>',
     floor: '<rect x="3" y="3" width="18" height="18" rx="1"></rect><path d="M3 9h18M3 15h18M10 3v6M15 9v6M8 15v6M17 15v6"></path>',
     paint: '<rect x="3" y="3" width="15" height="6" rx="1"></rect><path d="M18 6h3v5h-9v3"></path><rect x="10" y="14" width="4" height="7" rx="1"></rect>',
@@ -1029,6 +1019,12 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
       included: ['Shaker-style cabinet installs', 'Cabinet hardware and paint refresh', 'Countertop replacement', 'Backsplash tile', 'Cabinet painting and refinishing', 'Soft-close hinges and drawer slides', 'Open shelving', 'Pantry and storage upgrades'],
       notes: ['We protect floors and contain dust, clean up daily and send progress photos.', 'Sink, faucet and lighting hookups need a licensed plumber or electrician. We’ll refer you to one we trust.'],
       related: ['painting', 'handyman-repair', 'realtor'] },
+    { id: 'bath', icon: 'bath', title: 'Bathroom Remodels & Upgrades', short: 'Fresh, modern bathrooms, from a quick refresh to a full remodel.',
+      lede: 'New vanities, tile and fixtures can turn a tired bathroom into one you love, with safety built in for the years ahead.',
+      body: ['Bathrooms take more wear than any other room, and on the Gulf Coast the humidity is hard on caulk, grout and paint. A bathroom update makes the room look better and work better.', 'Kevin walks the room with you, talks through what you want, and gives you a line-by-line written quote. Our skilled technicians do the work, and you get progress photos along the way.'],
+      included: ['Vanity and mirror replacement', 'Tile floors and shower walls', 'Walk-in shower and tub-to-shower updates', 'Frameless glass and shower doors', 'Comfort-height toilets', 'Grab bars, shower seats and hand-held showers', 'Lighting, mirrors and exhaust fan upgrades', 'Re-caulking, re-grouting and fresh paint'],
+      notes: ['Safety upgrades like grab bars and a shower seat can be built in so they look like part of the design.', 'Plumbing and electrical hookups need a licensed plumber or electrician. We’ll coordinate with one we trust.', 'Ask for a free in-home estimate. Photos of the bathroom help us quote faster.'],
+      related: ['kitchen', 'flooring', 'aging-in-place'] },
     { id: 'flooring', icon: 'floor', title: 'Flooring: LVP, Tile & More', short: 'Waterproof luxury vinyl plank, tile and laminate, installed clean and level.',
       lede: 'New floors change the whole feel of a home. We install LVP, tile and laminate that stand up to sand, humidity and everyday life.',
       body: ['On the Gulf Coast, floors take a beating from sand, wet feet and humidity. Waterproof luxury vinyl plank (LVP) and tile are the go-to choices because they look great and handle moisture without warping.', 'Kevin walks the space with you, helps you pick the right material, and gives you a written price that includes prep, removal of old flooring and trim. Our skilled installers handle the rest.'],
@@ -1076,7 +1072,8 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
       body: ['Vacant units cost money every day. We help property managers and landlords turn units quickly and keep occupied ones in good repair.', 'Send a work order and get a quote within 24 hours, then before-and-after photos with every invoice.'],
       included: ['Unit turnovers and make-readies', 'Wall patching and touch-up paint', 'Blinds, locks and hardware swaps', 'Work orders with 24-hour quotes', 'Seasonal unit inspections', 'Junk and debris haul-off'],
       notes: ['W-9 provided for your vendor file.', 'See our For Property Managers page for vendor setup.'],
-      related: ['handyman-repair', 'outdoor', 'realtor'] }
+      related: ['handyman-repair', 'outdoor', 'realtor'] },
+    { id: 'water-air', link: '#water-treatment', icon: 'water', title: 'Water & Air Quality', short: 'Free in-home water and air checks, plus softeners and filtration systems.', lede: '', body: [], included: [], notes: [], related: [] }
   ];
   var POSTS = [
     { id: 'post-hurricane', art: 'a', title: 'Hurricane Prep for Emerald Coast Homes: A Simple Checklist', date: 'October 2026', excerpt: 'A little work before storm season can save thousands in repairs. Here’s where to start.',
@@ -1096,7 +1093,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
   function byId(id) { for (var i = 0; i < SERVICES.length; i++) if (SERVICES[i].id === id) return SERVICES[i]; return null; }
   function cardHTML(s) {
-    return '<a class="card" href="#' + s.id + '"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + ICONS[s.icon] + '</svg></div><h3>' + esc(s.title) + '</h3></div><p style="color: var(--muted); font-size: 16px">' + esc(s.short) + '</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>';
+    return '<a class="card" href="' + (s.link || '#' + s.id) + '"><div class="top-row"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + ICONS[s.icon] + '</svg></div><h3>' + esc(s.title) + '</h3></div><p style="color: var(--muted); font-size: 16px">' + esc(s.short) + '</p><span class="more"><svg aria-hidden="true"><use href="#arrow"></use></svg>Read more</span></a>';
   }
   function postCard(p) {
     return '<a class="post" href="#' + p.id + '"><div class="post-art ' + p.art + '"><svg viewBox="0 0 90 90" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">' + p.icon + '</svg></div><div class="post-body"><span class="date">' + p.date + '</span><h3>' + esc(p.title) + '</h3><p>' + esc(p.excerpt) + '</p><span class="k">Keep reading</span></div></a>';
@@ -1137,7 +1134,7 @@ footer { background: var(--bg); padding-block: 52px 0; padding-left: max(16px, e
   function route() {
     var id = (location.hash || '#home').slice(1) || 'home';
     var target = null, group = null, title = 'Mainsail Home Services';
-    var svc = byId(id);
+    var svc = byId(id); if (svc && svc.link) svc = null;
     var post = null; POSTS.forEach(function (p) { if (p.id === id) post = p; });
     if (svc) { fillService(svc); target = svcPage; group = svc.id === 'rental' ? 'handyman' : 'handyman'; title = svc.title + ' | Mainsail'; }
     else if (post) { fillPost(post); target = postPage; group = 'about'; title = post.title + ' | Mainsail'; }
